@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #237461;
+    --secondary-color: #1B3E36;
+    --black: #161616;
+    --white:#f2f2f2;
+    --font: "Work Sans", serif;
+    --headline: "Sniglet", serif;
+}
+
+body {
+    font-family: var(--font);
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 40px;
+    position: absolute;
+}
+
+header section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    padding-right: 40px;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header ul a {
+    text-decoration:none
+}
+
+header ul li {
+    font-family: var(--font);
+    color: var(--white);
+    padding: 0 20px;
+}
+
+header input {
+    width: 300px;
+    height: 30px;
+    background-image: url('/img/search.svg');
+    background-size: 8%; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    margin-right: 20px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+}
+
+
+
+header .icon {
+    height: 30px;
+    width: auto;
+    padding: 0 20px;
+}
+
+.video {
+    background: var(--black);
+}
