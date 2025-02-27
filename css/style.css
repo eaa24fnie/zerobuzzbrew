@@ -22,6 +22,10 @@ body {
     overflow: hidden;
 }
 
+
+/* HEADER */
+
+
 header {
     width: 100%;
     height: auto;
@@ -59,16 +63,11 @@ header ul li {
 header input {
     width: 300px;
     height: 30px;
-    background-image: url('/img/search.svg');
-    background-size: 8%; 
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
+    padding: 12px 20px 12px 20px;
     margin-right: 20px;
     border: 2px solid #ccc;
     border-radius: 20px;
 }
-
-
 
 header .icon {
     height: 30px;
@@ -76,6 +75,23 @@ header .icon {
     padding: 0 20px;
 }
 
+
+/* HEADER SLUT */
+
+.videologo {
+    width: 20%;
+    height: auto;
+    position: absolute;
+}
+
 .video {
-    background: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.video video {
+    width: 100%;
+    height: auto;
 }
