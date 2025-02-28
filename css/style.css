@@ -22,6 +22,8 @@ body {
 }
 
 
+
+
 /* HEADER */
 
 
@@ -32,6 +34,7 @@ header {
     justify-content: space-between;
     padding: 30px 40px;
     position: absolute;
+    z-index: 1000;
 }
 
 header section {
@@ -53,19 +56,24 @@ header ul a {
     text-decoration:none
 }
 
+header ul a li:hover {
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
 header ul li {
     font-family: var(--font);
     color: var(--white);
-    padding: 0 20px;
+    padding: 20px;
+    border-radius: 40px;
 }
 
 header input {
     width: 300px;
     height: 30px;
-    padding: 12px 20px 12px 20px;
-    margin-right: 20px;
-    border: 2px solid #ccc;
+    margin: 12px 20px 12px 20px;
     border-radius: 20px;
+    color: var(--black);
 }
 
 header .icon {
@@ -77,6 +85,9 @@ header .icon {
 
 /* HEADER SLUT */
 
+
+
+
 .videologo {
     width: 20%;
     height: auto;
@@ -87,14 +98,14 @@ header .icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
+    background: var(--black);
 }
 
 .video video {
     width: 100%;
     height: auto;
 }
-
 
 
 
@@ -182,5 +193,6 @@ input[type=submit]:hover {
     height: 70px;
     margin-right: 10px;
 }
+
 
 /* FOOTER SLUTTER */
