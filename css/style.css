@@ -22,6 +22,19 @@ body {
 }
 
 
+.pilsner {
+    color: var(--primary-color);
+}
+
+.spikyginger {
+    color: #C1A266;
+}
+
+.pinkypromise {
+    color: #583032;
+}
+
+
 
 
 /* HEADER */
@@ -213,6 +226,9 @@ header .icon:nth-child(4) {
 
 .favoritter-tekst-dropdown {
     width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 button.dropbtn {
@@ -225,7 +241,7 @@ button.dropbtn {
 * Style the dropdown button */
 .dropbtn {
   background-color: #ffffff;
-  color: white;
+  color: var(--black);
   padding: 10px 15px;
   font-size: 16px;
   border: none;
@@ -264,6 +280,62 @@ button.dropbtn {
 }
 
 
+.daaser {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.daase {
+    width: 17%;
+    margin: 0 40px;
+}
+
+.daase h3 {
+    font-family: var(--font);
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.daase p {
+    font-family: var(--font);
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.daase p:nth-child(4) {
+    font-family: var(--font);
+    color: var(--primary-color);
+    font-size: 30px;
+}
+
+.button {
+    background: var(--primary-color);
+    display: flex;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.button p {
+    width: 40%;
+    color: var(--white);
+    background: var(--secondary-color);
+    padding: 10px;
+    border-radius: 20px 0 0 20px;
+}
+
+.daase button {
+    background: none;
+    border: none;
+    color: white;
+    width: 60%;
+}
+
+.daase img {
+    width: 100%;
+    height: auto;
+}
 
 
 
