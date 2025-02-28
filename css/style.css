@@ -74,6 +74,7 @@ header input {
     margin: 12px 20px 12px 20px;
     border-radius: 20px;
     color: var(--black);
+    border: none;
 }
 
 header .icon {
@@ -98,13 +99,23 @@ header .icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
     background: var(--black);
 }
 
 .video video {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
+}
+.video a {
+    position: absolute;
+    bottom: 0;
+}
+
+.arrow {
+    height: 60px;
+    width: auto;
+    margin-bottom: 100px;
 }
 
 
