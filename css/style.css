@@ -64,7 +64,7 @@ header ul a li:hover {
 header ul li {
     font-family: var(--font);
     color: var(--white);
-    padding: 20px;
+    padding: 10px 15px;
     border-radius: 40px;
 }
 
@@ -81,6 +81,11 @@ header .icon {
     height: 30px;
     width: auto;
     padding: 0 20px;
+}
+
+header .icon:nth-child(4) {
+    height: 20px;
+    margin-left: 20px;
 }
 
 
@@ -203,6 +208,32 @@ input[type=submit]:hover {
     width: auto;
     height: 70px;
     margin-right: 10px;
+}
+
+.nyhedsbrev {
+    width: 50%;
+    padding: 20px 80px 50px 80px;
+}
+
+.nyhedsbrev .container h2 {
+    color: var(--primary-color);
+}
+
+.nyhedsbrev .container input {
+    border: 1px solid var(--primary-color);
+}
+
+.nyhedsbrev input[type=submit] {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.nyhedsbrev ::placeholder {
+    color: var(--primary-color);
+}
+
+.nyhedsbrev   input, select, textarea{
+    color: var(--primary-color);
 }
 
 
