@@ -215,6 +215,55 @@ header .icon:nth-child(4) {
     width: 25%;
 }
 
+button.dropbtn {
+    background-color: white;
+    border: none;
+    font-family: var(--font);
+    font-size: 22px;
+}
+
+* Style the dropdown button */
+.dropbtn {
+  background-color: #ffffff;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: var(--font);
+}
+
+/* Dropdown containeren */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown indhold (gemt by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 180px;
+  z-index: 1;
+  margin-left: 100px;
+}
+
+/* Styling dropdown links */
+.dropdown-content a {
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+/* farven på hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+
 
 
 
