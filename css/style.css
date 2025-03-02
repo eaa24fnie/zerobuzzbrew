@@ -318,11 +318,8 @@ button.dropbtn {
 }
 
 .button p {
-    width: 40%;
     color: var(--white);
-    background: var(--secondary-color);
-    padding: 10px;
-    border-radius: 20px 0 0 20px;
+    font-size: 1rem;
 }
 
 .daase button {
@@ -335,6 +332,19 @@ button.dropbtn {
 .daase img {
     width: 100%;
     height: auto;
+}
+
+.antal {
+    display: flex;
+    width: 40%;
+    background: var(--secondary-color);
+    padding: 10px;
+    border-radius: 20px 0 0 20px;
+    justify-content: space-evenly;
+}
+
+.antal img {
+    width: 10px;
 }
 
 
