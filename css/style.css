@@ -362,10 +362,10 @@ button.dropbtn {
 }
 
 /* VÆRDI SEKTION */
-.hexagon {
+.video-hexagon {
     width: 100vh;
     height: 100vh;
-    background-color: var(--secondary-color);
+    background-color: pink;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     margin-left: -15%;
     z-index: 1000;
@@ -373,10 +373,20 @@ button.dropbtn {
 
     .square {
         width: 100%;
-        height: 100vh;
-        background-color: var(--primary-color);
+        height: 140vh;
+        background-color: var(--secondary-color);
         margin-top: -50vh;
     }
+
+    .hexagon {
+        width: 150vh;
+        height: 100vh;
+        background-color: white;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        margin-left: -20%;
+        z-index: 1000;
+        margin-top: -40vh;
+        }
 
 /* FOOTER STARTER */
 
