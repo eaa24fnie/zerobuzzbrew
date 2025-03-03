@@ -356,7 +356,7 @@ button.dropbtn {
 
 /* USER STORIES */
 
-.user-stories {
+/* .user-stories {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -366,20 +366,61 @@ button.dropbtn {
 }
 
 .user-stories span {
-    font-size: 100px;
+    font-size: 200px;
     font-family: var(--font);
+}
+
+.user-stories p {
+    font-size: 30px;
+    font-weight: 300;
 }
 
 .citation-venstre {
     left: 0%;
+    margin-bottom: -10rem;
     color: var(--primary-color);
 }
 
 .citation-højre {
     left: 0%;
     color: var(--primary-color);
+} */
+
+/* USER STORIES */
+.user-stories {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10% 15%;
+    gap: 10%; 
 }
 
+.user-stories p {
+    width: 20rem;
+    font-size: 25px;
+    font-weight: 300;
+    position: relative;
+    line-height: 1.6;
+}
+
+.user-stories span {
+    font-size: 200px;
+    font-family: var(--font);
+    position: absolute;
+}
+
+.citation-venstre {
+    top: -8rem; /* Justér denne værdi for at rykke citationstegnet tættere på teksten */
+    left: 0rem;
+    color: var(--primary-color);
+}
+
+.citation-højre {
+    bottom: -15rem;
+    right: 0rem;
+    color: var(--primary-color);
+}
 
 
 /* VÆRDI SEKTION */
