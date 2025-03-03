@@ -351,7 +351,15 @@ button.dropbtn {
 
 /* FAVORITTER SLUTTER */
 
+/* USER STORIES */
 
+.user-stories {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+}
 
 /* FOOTER STARTER */
 
