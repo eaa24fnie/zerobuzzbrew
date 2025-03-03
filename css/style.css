@@ -362,6 +362,19 @@ button.dropbtn {
 }
 
 /* VÆRDI SEKTION */
+.tekst-1 {
+padding-left: 35%;
+margin-top: 10%;
+margin-bottom: -20%;
+font-size: 3rem;
+text-align: center;
+font-weight: 200;
+}
+
+.tekst-1 span {
+    font-weight: bold;
+}
+
 .video-hexagon {
     width: 100vh;
     height: 100vh;
@@ -372,6 +385,7 @@ button.dropbtn {
 
     .video-hexagon video {
         margin-left: -50%;
+        height: 100%;
     }
 
     .square {
@@ -390,6 +404,7 @@ button.dropbtn {
         z-index: 1000;
         margin-top: -40vh;
         }
+
 
 /* FOOTER STARTER */
 
