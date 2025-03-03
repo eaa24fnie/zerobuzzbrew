@@ -419,10 +419,22 @@ font-weight: 200;
         height: 100vh;
         background-color: white;
         clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-        margin-left: -20%;
+        margin-left: -21%;
         z-index: 1000;
         margin-top: -40vh;
+        display: flex;
+        justify-content: center;
         }
+
+    .tekst-3 {
+        padding-top: 10%;
+        padding-left: 100px;
+        font-weight: 800;
+        color: var(--secondary-color);
+        font-size: 3.5rem;
+        z-index: 1000;
+
+    }
 
     .blomst {
         width: 20%;
