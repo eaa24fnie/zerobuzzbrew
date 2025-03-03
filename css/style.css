@@ -365,10 +365,13 @@ button.dropbtn {
 .video-hexagon {
     width: 100vh;
     height: 100vh;
-    background-color: pink;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     margin-left: -15%;
     z-index: 1000;
+    }
+
+    .video-hexagon video {
+        margin-left: -50%;
     }
 
     .square {
