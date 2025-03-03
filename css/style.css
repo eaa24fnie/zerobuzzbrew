@@ -137,6 +137,8 @@ header .icon:nth-child(4) {
     margin-bottom: 100px;
 }
 
+/* NYHED */
+
 
 .nyhed {
     width: 100%;
@@ -191,15 +193,16 @@ header .icon:nth-child(4) {
  }
 
 .nyhed-billede img {
-    height: 900px;
+    height: 800px;
+    margin-top: -15%;
 }
-
 
 
 
 /* FAVORITTER STARTER */
 
 .favoritter {
+    margin-top: 10rem;
     height: auto;
     text-align: center;
 }
@@ -423,9 +426,9 @@ font-weight: 200;
 
     .hexagon {
         width: 150vh;
-        height: 100vh;
-        background-color: white;
-        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        height: 60vh;
+        background-color: #ffffff;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 75% 100%, 0% 100%, 0% 0%);
         margin-left: -21%;
         z-index: 1000;
         margin-top: -40vh;
@@ -455,9 +458,10 @@ font-weight: 200;
 /* BANNER */
 
 .banner {
+    margin-top: 5rem;
     width: 100%;
     overflow: hidden;
-    background-color: #1c3d32;
+    background-color: var(--primary-color);
     color: white;
     font-size: 24px;
     font-weight: bold;
@@ -475,6 +479,8 @@ font-weight: 200;
 
 .banner-content p {
     font-weight: 400;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .banner-space {
@@ -496,7 +502,6 @@ font-weight: 200;
 footer {
     background: var(--white);
     display: flex;
-    margin-top: 200px;
 }
 
 .kontakt {
