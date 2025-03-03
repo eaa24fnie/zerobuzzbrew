@@ -361,8 +361,26 @@ button.dropbtn {
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding-top: 10%;
+    padding: 10% 15%;
+    gap: 5%; 
 }
+
+.user-stories span {
+    font-size: 100px;
+    font-family: var(--font);
+}
+
+.citation-venstre {
+    left: 0%;
+    color: var(--primary-color);
+}
+
+.citation-højre {
+    left: 0%;
+    color: var(--primary-color);
+}
+
+
 
 /* VÆRDI SEKTION */
 .tekst-1 {
