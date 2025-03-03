@@ -405,10 +405,17 @@ font-weight: 200;
         font-weight: 200;
         color: #ffffff;
         }
-        
+
     .tekst-2 span {
             font-weight: bold;
         }
+    
+    .blomst {
+        width: 20%;
+        margin-left: 35%;
+        margin-top: -23%;
+        margin-bottom: 7%;
+    }
     
     .space-between {
         padding-top: 5%;
@@ -435,6 +442,8 @@ font-weight: 200;
         z-index: 1000;
 
     }
+
+    
 
     .blomst {
         width: 20%;
