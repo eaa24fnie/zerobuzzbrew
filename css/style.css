@@ -393,7 +393,20 @@ font-weight: 200;
         height: 140vh;
         background-color: var(--secondary-color);
         margin-top: -50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+    .tekst-2 {
+        font-size: 3rem;
+        text-align: center;
+        font-weight: 200;
+        color: #ffffff;
+        }
+        
+    .tekst-2 span {
+            font-weight: bold;
+        }
 
     .hexagon {
         width: 150vh;
