@@ -379,6 +379,7 @@ font-weight: 200;
     width: 100vh;
     height: 100vh;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+
     margin-left: -15%;
     z-index: 1000;
     }
@@ -408,6 +409,10 @@ font-weight: 200;
     .tekst-2 span {
             font-weight: bold;
         }
+    
+    .space-between {
+        padding-top: 5%;
+    }
 
     .hexagon {
         width: 150vh;
@@ -422,7 +427,7 @@ font-weight: 200;
     .blomst {
         width: 20%;
         margin-left: 35%;
-        margin-top: -23%;
+        margin-top: -25%;
         margin-bottom: 7%;
     }
 
