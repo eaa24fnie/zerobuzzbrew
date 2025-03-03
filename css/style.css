@@ -361,6 +361,23 @@ button.dropbtn {
     padding-top: 10%;
 }
 
+/* VÆRDI SEKTION */
+.hexagon {
+    width: 100vh;
+    height: 100vh;
+    background-color: var(--secondary-color);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    margin-left: -15%;
+    z-index: 1000;
+    }
+
+    .square {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--primary-color);
+        margin-top: -50vh;
+    }
+
 /* FOOTER STARTER */
 
 
