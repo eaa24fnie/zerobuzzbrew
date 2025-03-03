@@ -443,6 +443,26 @@ font-weight: 200;
         margin-bottom: 7%;
     }
 
+/* BANNER */
+
+.banner {
+    width: 100%;
+    overflow: hidden;
+    background-color: #1c3d32;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+    padding: 15px 0;
+    position: relative;
+}
+
+.banner-content {
+    position: absolute;
+    left: 100%;
+    white-space: nowrap;
+}
+
 /* FOOTER STARTER */
 
 
