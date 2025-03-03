@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #237461;
+    --secondary-color: #1B3E36;
+    --black: #161616;
+    --white:#f2f2f2;
+    --font: "Work Sans", serif;
+    --headline: "Sniglet", serif;
+}
+
+body {
+    font-family: var(--font);
+}
+
+
+.pilsner {
+    color: var(--primary-color);
+}
+
+.spikyginger {
+    color: #C1A266;
+}
+
+.pinkypromise {
+    color: #583032;
+}
+
+
+
+
+
+header ul li, .logo, header .icon:not(:last-child) {
+    filter: invert(100%);
+}
+
+header input {
+    border: 1px solid var(--black);
+}
+
+
+
+
+
+.produkt {
+    margin-top: 0;
+    padding-top: 20vh;
+    height: auto;
+    width: 100%;
+    display: flex;
+}
+
+.beskrivelse {
+    width: 40%;
+    color: var(--black);
+    font-family: var(--font);
+}
+
+.daaser {
+    width: 40%;
+}
+
+.daase img {
+    height: 60vh;
+    width: auto;
+}
+
