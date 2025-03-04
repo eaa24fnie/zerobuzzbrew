@@ -6,6 +6,7 @@
     <title>Zero Buzz Brew</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/frederik.css">
 </head>
 
 <body>
@@ -27,7 +28,10 @@
 
     <!-- section med søgefelt, kurv, login og hvilket land man køber fra -->
     <section>
-      <input type="search" placeholder="Search..">
+      <article class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for a page...">
+        <div id="autocomplete" class="autocomplete"></div>
+      </article>
       <img class="icon" src="img/account.svg" alt="account">
       <img class="icon" src="img/shopping.svg" alt="shopping cart">
       <img class="icon" src="img/denmark.svg" alt="sprog">
@@ -46,16 +50,18 @@
         <article class="sortiment-tekst-dropdown">
           <button class="dropbtn">MOST POPULAR ▼</button>
           <aside class="dropdown-content">
-            <a href="#" data-sort="popular">Most Popular</a>
-            <a href="#" data-sort="newest">Newest</a>
+            <a href="#">Price: Low to High</a>
+            <a href="#">Price: High to Low</a>
+            <a href="#">Newest</a>
+            <a href="#">Best Rated</a>
           </aside>
         </article>
       </section>
 
       <section class="shopcontainer">
         
-        <article class="product" data-release-date="2023-01-15">
-          <a href="pilsner.html"><img class="produktbillede" src="img/pilsner.webp" alt="Product 1"></a>
+        <article class="product">
+          <a href="produkter/pilsner.html"><img class="produktbillede" src="img/pilsner.webp" alt="Product 1"></a>
           <h3 class="pinkypromise">Pilsner</h3>
           <p>Zero Buzz 25,00 DKK</p>
           <article class="button"> 
@@ -68,8 +74,8 @@
           </article>
         </article>
 
-        <article class="product" data-release-date="2023-02-15">
-          <img class="produktbillede" src="img/spiky-ginger.webp" alt="Product 2">
+        <article class="product">
+          <a href="produkter/spikyginger.html"></a><img class="produktbillede" src="img/spiky-ginger.webp" alt="Product 2"></a>
           <h3>Spiky Ginger</h3>
           <p>Zero Buzz 25,00 DKK</p>
           <article class="button">
@@ -82,8 +88,8 @@
           </article>
         </article>
 
-        <article class="product" data-release-date="2023-03-15">
-          <img class="produktbillede" src="img/pinky-promise.webp" alt="Product 3">
+        <article class="product">
+          <a href="produkter/pinkypromise.html"></a><img class="produktbillede" src="img/pinky-promise.webp" alt="Product 3"></a>
           <h3>Pinky Promise</h3>
           <p>Zero Buzz 25,00 DKK</p>
           <article class="button">
@@ -96,8 +102,8 @@
           </article>
         </article>
 
-        <article class="product" data-release-date="2023-04-15">
-          <img class="produktbillede" src="img/basil-smash.webp" alt="Product 4">
+        <article class="product">
+          <a href="produkter/basilsmash.html"></a><img class="produktbillede" src="img/basil-smash.webp" alt="Product 4"></a>
           <h3>Basil Smash</h3>
           <p>Zero Buzz 25,00 DKK</p>
           <article class="button">
@@ -110,8 +116,8 @@
           </article>
         </article>
 
-        <article class="product" data-release-date="2023-07-15">
-          <img class="produktbillede" src="img/beetylychouis.webp" alt="Product 5">
+        <article class="product">
+          <a href="produkter/beetylychious.html"></a><img class="produktbillede" src="img/beetylychouis.webp" alt="Product 5"></a>
           <h3>Beetylychious</h3>
           <p>Zero Buzz 25,00 DKK</p>
           <article class="button">
@@ -124,8 +130,8 @@
           </article>
         </article>
 
-        <article class="product" data-release-date="2023-05-15">
-          <img class="produktbillede" src="img/berry-bomb.webp" alt="Product 6">
+        <article class="product">
+          <a href="produkter/berrybomb.html"><img class="produktbillede" src="img/berry-bomb.webp" alt="Product 6"></a>
           <h3>Berry Bomb</h3>
           <p>Zero Buzz 25,00 DKK</p>
           <article class="button">
@@ -140,11 +146,8 @@
 
       </section>
 
+
     </section>
-
-
-
-    
   
     <section class="infographic-titel">
     <h3>VORES SMAGSKORT</h3>
@@ -222,7 +225,7 @@
   </footer>
 
   <script src="js/script.js"></script>
-  <script src="js/rune.js"></script>
+  <script src="js/frederik.js"></script>
 
 </body>
 
