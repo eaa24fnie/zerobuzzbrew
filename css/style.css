@@ -111,6 +111,7 @@ header .icon:nth-child(4) {
     width: 20%;
     height: auto;
     position: absolute;
+    z-index: 1001;  /* placerer logoet over videoen */
 }
 
 .video {
@@ -118,15 +119,19 @@ header .icon:nth-child(4) {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: var(--black);
-    object-fit: cover;
+    width: 100vw; 
     overflow: hidden;
-    
+    position: relative; /* Sikrer at video kan placeres absolut */
 }
 
 .video video {
-    height: 100%;
-    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 100vw; 
+    height: 100vh;
+    object-fit: cover; /* Sikrer at videoen dækker hele området uden at forvrænge */
 }
 .video a {
     position: absolute;
