@@ -274,10 +274,11 @@ button.dropbtn {
     width: 50%;
     margin: 25% 0% 0% 25%;
     cursor: pointer; /* ændrer cursoren til 'hand' */
+    transition: opacity 0.9s ease;
   }
-  
-  
- 
+
+
+
   .product img {
     max-width: 100%;
     height: auto;
