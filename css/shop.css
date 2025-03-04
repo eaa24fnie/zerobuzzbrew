@@ -280,11 +280,24 @@ button.dropbtn {
     transform: translateY(-10px); /* Flytter billedet 10px opMoves the image up by 10 pixels */
   }
  
+.infographic-titel {
+    font-family: var(--headline);
+    display: flex;
+    justify-content: center; 
+    font-size: 4rem;
+    margin-top: 4rem;
+    color: var(--secondary-color);
+}
 
+ .infographic {
+    display: flex;
+    justify-content: center;
+ }
 
-  .produktbillede:hover {
+ .infographic img {
+    width: 55%;
+ }
 
-  }
 
 
 
