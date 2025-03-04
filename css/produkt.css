@@ -109,9 +109,21 @@ header input {
 }
 
 .mobile-pay {
-    background-color: blue;
+    background-color: #5875FA;
 }
 
+.tallet1 {
+    text-align: center;
+}
+
+.relaterede {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    font-family: var(--font);
+    font-size: 1.5rem;
+}
 
 .andre {
     padding: 0 12%;
@@ -124,8 +136,7 @@ header input {
 
 .relateret {
     display: flex;
-    margin-top: 5rem;
-    background: var(--primary-color);
+    background: lightgray;
     width: 400px;
     height: 400px;
     justify-content: center;
