@@ -16,72 +16,62 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-function addToCart(product){
-    // hent nuværende værdi fra inputfeltet med specifikt id og omdan til et tal
-    const quantity = parseInt(document.getElementById(product).value);
+let openShopping = document.querySelector('.shopping');
+let closeShopping = document.querySelector('.closeShopping');
+let list = document.querySelector('.list');
+let listCard = document.querySelector('.listCard');
+let body = document.querySelector('body');
+let total = document.querySelector('.total');
+let quantity = document.querySelector('.quantity');
 
-    // øg quantity med 1 - læg en til den eksisterende quantity værdi
-    document.getElementById(product).value = quantity + 1;
+openShopping.addEventListener('click', ()=>{
+    body.classList.add('active');
+});
 
-    // Opdater totalprisen 
-    // Fejl - Her skal man kalde på funktionen updateTotalPrice(product) og ikke totalPrice()
-    updateTotalPrice(product);
-
-}
-
-function removeFromCart(product){
-    // hent nuværende værdi fra inputfeltet med specifikt id og omdan til et tal
-    const quantity = parseInt(document.getElementById(product).value);
-
-    if(quantity > 0){
-    // formindsk quantity med 1 - træk en fra den eksisterende quantity værdi
-    document.getElementById(product).value = quantity -1;
-
-    //Opdater totalsummen for den enkelte varer (vare = kaffe-produkt)
-    updateTotalPrice(product);
-    }
-}
-
-function resetCart(product){
-    // sæt quantity til 0
-    document.getElementById(product).value = 0;
-
-    //Opdater totalsummen for den enkelte varer (vare = kaffe-produkt)
-    updateTotalPrice(product);
-
-}
-
-// funktion som opdatere prisen for den enkelte vare (vare = kaffe-produkt)
-function updateTotalPrice(product){
-    // hent mængden (quantity) og pris-inputfeltet for den specifikke vare (vare = kaffe-produkt)
-    const quantity = parseInt(document.getElementById(product).value);
-
-    const price = parseInt(document.getElementById(product +"-price").value);
-
-    // Beregner totalprisen for denne specifikke vare 
-    const total = quantity * price;
-
-    document.getElementById(product +"-total").value = total;
-
-    // Opdater totalPrisen for alle vare
-    totalPrice();
-
-}
-
-// funktion til at beregne og opdatere den samlede totalpris for alle varer i kurven
-function totalPrice(){
-    // variable til at holde styr på den samlede totalpris
-    let totalSum = 0;
-
-    //finder alle inputfelter der indeholde et id hvor "-total" indgår i slutningen af id tekst-strengen
-    // Fejl her manglede jeg at indsætte enkelt anførelses-tegn rundt om '-total' inde i querySelectorAll
-    
-    const productElements = document.querySelectorAll("[id$='-total']");
-
-    // looper gennem hvert produkt-element (coffee, espresso, americano) og lægger værdierne sammen
-    productElements.forEach(productElem => {
-        totalSum += parseInt(productElem.value);
-    });
-
-    document.getElementById('totalSum').value = totalSum;
+closeShopping.addEventListener('click', ()=>{
+    body.classList.remove('active');
+});
+let products = [
+    {
+        id: 1,
+        name: 'PRODUCT NAME 1',
+        image: 'img/pilsner.webp',
+        price: 22,
+    },
+    {
+        id: 2,
+        name: 'PRODUCT NAME 2',
+        image: 'img/basil-smash.webp',
+        price: 25,
+    },
+    {
+        id: 3,
+        name: 'PRODUCT NAME 3',
+        image: 'img/beetylychouis.webp',
+        price: 25,
+    },
+    {
+        id: 4,
+        name: 'PRODUCT NAME 4',
+        image: 'img/berry-bomb.webp',
+        price: 25,
+    },
+    {
+        id: 5,
+        name: 'PRODUCT NAME 5',
+        image: 'img/pinky-promise.webp',
+        price: 25,
+    },
+    {
+        id: 6,
+        name: 'PRODUCT NAME 6',
+        image: 'img/spiky-ginger.webp',
+        price: 25,
+    },
+];
+let listCards = [];
+function initApp(){
+    products.forEach((valye, key)=>{
+        let newSection 
+    }) 
 }
