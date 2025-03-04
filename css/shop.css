@@ -30,7 +30,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 30px 40px;
-    position: fixed;
+    position: absolute;
     z-index: 1000;
 }
 
@@ -87,8 +87,10 @@ header .icon:nth-child(4) {
 
 /* Ændrer farven af logo mm. i navbaren til sort */
 header ul li, .logo, header .icon:not(:last-child) {
-    filter: invert(100%);
+    filter: invert(100%); 
 }
+
+
 
 header input {
     border: 1px solid var(--black);
@@ -96,15 +98,13 @@ header input {
 
 /* HEADER SLUT */
 
-body {
-    padding-top: 100px; /* Juster højden afhængigt af navbarens størrelse */
-}
 
 /* SORTIMENT STARTER */
 .sortiment {
 
     height: auto;
     text-align: center;
+    padding-top: 120px;
 }
 
 .sortiment-tekst {
@@ -276,12 +276,15 @@ button.dropbtn {
     transition: transform 0.3s ease; /* Smooth overgang til jump-effekten */
   }
   
-  .product:hover img {
+  .product img:hover {
     transform: translateY(-10px); /* Flytter billedet 10px opMoves the image up by 10 pixels */
   }
  
 
 
+  .produktbillede:hover {
+
+  }
 
 
 
