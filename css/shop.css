@@ -325,7 +325,7 @@ footer {
 .container h2 {
     font-family: var(--font);
     font-size: 4rem;
-    vertical-align: top; /* Justerer vertikal placering */
+    vertical-align: top; /* Justerer vertxikal placering */
     color: var(--white);
 }
 
