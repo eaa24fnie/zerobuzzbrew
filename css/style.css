@@ -111,6 +111,7 @@ header .icon:nth-child(4) {
     width: 20%;
     height: auto;
     position: absolute;
+    z-index: 1001;  /* placerer logoet over videoen */
 }
 
 .video {
@@ -118,15 +119,19 @@ header .icon:nth-child(4) {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: var(--black);
-    object-fit: cover;
+    width: 100vw; 
     overflow: hidden;
-    
+    position: relative; /* Sikrer at video kan placeres absolut */
 }
 
 .video video {
-    height: 100%;
-    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 100vw; 
+    height: 100vh;
+    object-fit: cover; /* Sikrer at videoen dækker hele området uden at forvrænge */
 }
 .video a {
     position: absolute;
@@ -147,6 +152,7 @@ header .icon:nth-child(4) {
     height: auto;
     display: flex;
     overflow: hidden;
+   padding-bottom: 5%;
 }
 
  .nyhed-tekst {
@@ -220,13 +226,14 @@ header .icon:nth-child(4) {
 
 .favoritter-tekst p {
     font-family: var(--font);
-    font-size: 50px;
+    font-size: 45px;
 }
 
 .favoritter-tekst h3 {
     font-family: var(--headline);
-    font-size: 80px;
+    font-size: 70px;
     color: var(--secondary-color);
+    padding-bottom: 2%;
 }
 
 .favoritter-tekst-dropdown {
@@ -394,7 +401,7 @@ button.dropbtn {
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 10% 15%;
+    padding: 20% 15% 10%;
     gap: 10%; 
 }
 

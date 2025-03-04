@@ -188,7 +188,7 @@ button.dropbtn {
 
 
 
-.daaser {
+/* .daaser {
     width: 100%;
     display: grid;
     justify-content: center;
@@ -240,7 +240,7 @@ button.dropbtn {
 .daase img {
     width: 100%;
     height: auto;
-}
+} */
 
 .antal {
     display: flex;
@@ -253,6 +253,14 @@ button.dropbtn {
 
 .antal img {
     width: 10px;
+}
+
+.button button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: var(--font);
+    margin-left: 5px;
 }
 
 .shopcontainer {
@@ -276,7 +284,7 @@ button.dropbtn {
     transition: transform 0.3s ease; /* Smooth overgang til jump-effekten */
   }
   
-  .product img:hover {
+  .produktbillede:hover {
     transform: translateY(-10px); /* Flytter billedet 10px opMoves the image up by 10 pixels */
   }
  
