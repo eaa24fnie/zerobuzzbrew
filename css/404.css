@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #237461;
+    --secondary-color: #1B3E36;
+    --black: #161616;
+    --white:#f2f2f2;
+    --font: "Work Sans", sans-serif;
+    --headline: "Sniglet", cursive;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Fyld hele skærmen */
+    text-align: center;
+    position: relative;
+}
+
+.container {
+    max-width: 600px;
+    position: relative;
+    z-index: 2; /* Sørger for, at teksten er ovenpå billedet */
+}
+
+.error {
+    font-family: var(--font);
+    font-size: 180px;
+    font-weight: bolder;
+    margin: 0;
+}
+
+.error-besked {
+    font-family: var(--font);
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.subtext {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.buzz {
+    font-weight: bold;
+}
+
+.home-link {
+    font-size: 18px;
+    text-decoration: none;
+    color: blue;
+}
+
+.home-link:hover {
+    text-decoration: underline;
+}
+
+/* Bi-baggrund */
+.bee {
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
