@@ -102,9 +102,99 @@ header .icon:nth-child(4) {
 }
 
 
-
 /* HEADER SLUT */
 
+/* Popup om alder */
+
+/* Sløret baggrund */
+.overlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    background: rgba(54, 54, 54, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+/* Popup boks */
+.popup {
+    background: white;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.13);
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Overskrift */
+.popup h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 400;
+}
+
+/* Knapper */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 15px 50px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.yes {
+    background-color: var(--secondary-color);
+}
+
+.no {
+    background-color: var(--secondary-color);
+}
+
+button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+/* Fejlbesked */
+.hidden {
+    display: none;
+}
+
+.message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Disclaimer-tekst */
+.disclaimer {
+    font-size: 12px;
+    color: #666;
+    margin-top: 15px;
+}
+
+.disclaimer a {
+    font-size: 12px;
+    color: #666;
+    text-decoration: underline;
+}
+
+/* POPUP SLUT */
 
 .container{
     transition: 0.5s;

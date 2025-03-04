@@ -36,6 +36,24 @@
   </header>
 
   <main>
+    <!-- Confirm age popup -->
+    <section class="overlay" id="overlay">
+      <article class="popup">
+          <h2>Er du over 18 år gammel?</h2>
+          <aside class="buttons">
+              <button class="yes" onclick="confirmAge(true)">Ja</button>
+              <button class="no" onclick="confirmAge(false)">Nej</button>
+          </aside>
+          <p class="message hidden" id="errorMessage">Du er desværre ikke gammel nok til at få adgang.</p>
+          <p class="disclaimer">
+              HVIS DU FORTSÆTTER ACCEPTERER DU SAMTIDIG VORES 
+              <a href="#">COOKIE</a> OG 
+              <a href="#">PRIVATLIVSPOLITIK</a>.
+          </p>
+      </article>
+    </section>
+
+    <!-- Videos sektion -->
     <section class="video">
       <img class="videologo" src="img/zerobuzzbrew-kvadrat.svg" alt="Zero Buzz Brew Logo">
       <video autoplay muted loop>
@@ -44,7 +62,7 @@
       <a href=""><img class="arrow" src="img/pil.svg" alt="Arrow"></a>
     </section>
 
-
+    <!-- Nyheds sektion -->
     <section class="nyhed">
       <article class="nyhed-tekst">
           <h3>Nyhed</h3> 
@@ -59,7 +77,7 @@
     </section>
 
 
-    <section class="favoritter">
+    <section class="favoritter">     <!-- ??? er dette en sektion -->
 
       <article class="favoritter-tekst">
           <article class="favoritter-tekst-dropdown"></article>
@@ -124,6 +142,7 @@
         </article>
       </section>
 
+    <!-- User stories -->
     <section class="user-stories">
       <article>
         <p>
