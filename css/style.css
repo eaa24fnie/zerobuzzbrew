@@ -119,12 +119,14 @@ header .icon:nth-child(4) {
     align-items: center;
     height: 100vh;
     background: var(--black);
-    width: 100%;
+    object-fit: cover;
     overflow: hidden;
+    
 }
 
 .video video {
     height: 100%;
+    object-fit: cover;
 }
 .video a {
     position: absolute;
