@@ -42,7 +42,7 @@ p {
 
 
 
-header ul li, .logo, header .icon:not(:last-child) {
+header ul li, .logo, header .icon:not(:last-child), .kurv {
     filter: invert(100%);
 }
 
@@ -146,4 +146,10 @@ header input {
 .relateret img {
     width: auto;
     height: 80%;
+}
+
+.java {
+    background: none;
+    border-style: none;
+    width: 100%;
 }
