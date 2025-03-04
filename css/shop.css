@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #237461;
+    --secondary-color: #1B3E36;
+    --black: #161616;
+    --white:#f2f2f2;
+    --font: "Work Sans", serif;
+    --headline: "Sniglet", serif;
+}
+
+body {
+    font-family: var(--font);
+}
+
+/* HEADER */
+
+
+header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 40px;
+    position: fixed;
+    z-index: 1000;
+}
+
+header section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    padding-right: 40px;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header ul a {
+    text-decoration:none
+}
+
+header ul a li:hover {
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+header ul li {
+    font-family: var(--font);
+    color: var(--white);
+    padding: 10px 15px;
+    border-radius: 40px;
+}
+
+header input {
+    width: 300px;
+    height: 30px;
+    margin: 12px 20px 12px 20px;
+    border-radius: 20px;
+    color: var(--black);
+    border: none;
+}
+
+header .icon {
+    height: 30px;
+    width: auto;
+    padding: 0 20px;
+}
+
+header .icon:nth-child(4) {
+    height: 20px;
+    margin-left: 20px;
+}
+
+/* Ændrer farven af logo mm. i navbaren til sort */
+header ul li, .logo, header .icon:not(:last-child) {
+    filter: invert(100%);
+}
+
+header input {
+    border: 1px solid var(--black);
+}
+
+/* HEADER SLUT */
+
+body {
+    padding-top: 100px; /* Juster højden afhængigt af navbarens størrelse */
+}
+
+/* SORTIMENT STARTER */
+.sortiment {
+
+    height: auto;
+    text-align: center;
+}
+
+.sortiment-tekst {
+    display: flex;
+    width: 100%;
+}
+
+.sortiment-tekst p {
+    font-family: var(--font);
+    font-size: 50px;
+}
+
+.sortiment-tekst h3 {
+    font-family: var(--headline);
+    font-size: 80px;
+    color: var(--secondary-color);
+}
+
+.overskrift {
+    width: 50%;
+}
+
+.sortiment-tekst-dropdown {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+
+button.dropbtn {
+    background-color: white;
+    border: none;
+    font-family: var(--font);
+    font-size: 22px;
+}
+
+* Style the dropdown button */
+.dropbtn {
+  background-color: #ffffff;
+  color: var(--black);
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: var(--font);
+}
+
+/* Dropdown containeren */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown indhold (gemt by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 220px;
+  z-index: 1;
+  top: 100%; /* Moves the dropdown below the button */
+  left: 100px; /* Ensures it aligns with the button */
+}
+
+/* Styling dropdown links */
+.dropdown-content a {
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+/* farven på hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+
+
+
+
+.daaser {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.daase {
+    width: 17%;
+    margin: 0 40px;
+}
+
+.daase h3 {
+    font-family: var(--font);
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.daase p {
+    font-family: var(--font);
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.daase p:nth-child(4) {
+    font-family: var(--font);
+    color: var(--primary-color);
+    font-size: 30px;
+}
+
+.button {
+    background: var(--primary-color);
+    display: flex;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.button p {
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.daase button {
+    background: none;
+    border: none;
+    color: white;
+    width: 60%;
+}
+
+.daase img {
+    width: 100%;
+    height: auto;
+}
+
+.antal {
+    display: flex;
+    width: 40%;
+    background: var(--secondary-color);
+    padding: 10px;
+    border-radius: 20px 0 0 20px;
+    justify-content: space-evenly;
+}
+
+.antal img {
+    width: 10px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; /
+  }
+  
+  .product {
+    text-align: center; /* centrerer produktets info */
+    width: 50%;
+    margin: 25% 0% 0% 25%;
+    cursor: pointer; /* ændrer cursoren til 'hand' */
+  }
+  
+  
+ 
+  .product img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth overgang til jump-effekten */
+  }
+  
+  .product:hover img {
+    transform: translateY(-10px); /* Flytter billedet 10px opMoves the image up by 10 pixels */
+  }
+ 
+
+
+
+
+
+/* FOOTER STARTER */
+
+
+footer {
+    background: var(--white);
+    display: flex;
+}
+
+.kontakt {
+    width: 40%;
+    background-color: var(--secondary-color);
+    padding: 20px 80px 50px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+  
+.container {
+    padding-bottom: 10px;
+}
+
+.container h2 {
+    font-family: var(--font);
+    font-size: 4rem;
+    vertical-align: top; /* Justerer vertikal placering */
+    color: var(--white);
+}
+
+.container input {
+    width: 100%;
+    display: inline-block;
+    border: 1px solid var(--white);
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.0);
+}
+  
+input[type=submit] {
+    border: 1px solid var(--white);
+    background-color: var(--white);
+    color: var(--primary-color);
+    font-weight: bold;
+    width: 20%;
+}
+  
+input[type=submit]:hover {
+    background-color: var(--secondary-color);
+    color: var(--black);
+    border: none;
+}
+
+::placeholder {
+    color: var(--white);
+    opacity: 0.6;
+  }
+
+  input, select, textarea{
+    color: var(--white);
+    padding: 12px;
+}
+
+.container textarea {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--white);
+    width: 100%;
+    height: 100px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.some {
+    padding: 40px 80px 0 80px;
+}
+
+.some img {
+    width: auto;
+    height: 70px;
+    margin-right: 10px;
+}
+
+.nyhedsbrev {
+    width: 50%;
+    padding: 20px 80px 50px 80px;
+}
+
+.nyhedsbrev .container h2 {
+    color: var(--primary-color);
+}
+
+.nyhedsbrev .container input {
+    border: 1px solid var(--primary-color);
+}
+
+.nyhedsbrev input[type=submit] {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.nyhedsbrev ::placeholder {
+    color: var(--primary-color);
+}
+
+.nyhedsbrev   input, select, textarea{
+    color: var(--primary-color);
+}
+
+
+/* FOOTER SLUTTER */
