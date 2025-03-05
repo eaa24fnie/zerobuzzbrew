@@ -32,7 +32,7 @@ body {
 
 .error {
     font-family: var(--font);
-    font-size: 180px;
+    font-size: 220px;
     font-weight: bolder;
     margin: 0;
 }
@@ -43,7 +43,7 @@ body {
     margin: 10px 0;
 }
 
-.subtext {
+.terkst {
     font-size: 18px;
     margin-bottom: 20px;
 }
@@ -52,13 +52,13 @@ body {
     font-weight: bold;
 }
 
-.home-link {
+.forside-link {
     font-size: 18px;
     text-decoration: none;
     color: blue;
 }
 
-.home-link:hover {
+.forside-link:hover {
     text-decoration: underline;
 }
 
