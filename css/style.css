@@ -147,7 +147,7 @@ header .icon:nth-child(4) {
     margin-bottom: 20px;
 }
 
-button {
+.knap {
     padding: 15px 50px;
     border: none;
     cursor: pointer;
@@ -165,7 +165,7 @@ button {
     background-color: var(--secondary-color);
 }
 
-button:hover {
+.knap:hover {
     background-color: #555;
     transform: translateY(-2px);
 }
