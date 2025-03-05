@@ -140,7 +140,7 @@ function renderProductList(filterType) {
                         <button class="knap" onclick="addToCard(${value.id})">Tilføj til kurv</button>
                     </article>
                     <article>
-                        <a href="../404.html" ><button class="knap mobile-pay">Betal med Mobile-pay</button>
+                        <a href="../404.html" ><button class="knap mobile-pay"><img src="../img/mobile-pay.svg"></button>
                     </article></a>
                     <p>${value.description}</p>
                 </section>

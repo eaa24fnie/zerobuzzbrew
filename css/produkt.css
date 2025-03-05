@@ -37,6 +37,7 @@ body {
 p {
     width: 50%;
     text-align: justify;
+    line-height: 1.3;
 }
 
 
@@ -79,7 +80,8 @@ header input {
 
 .daaser {
     width: 50%;
-
+    display: flex;
+    justify-content: flex-end;
 }
 
 .daase img {
@@ -107,8 +109,8 @@ header input {
     cursor: pointer;
 }
 
-.beskrivelse h1, .beskrivelse h3, .beskrivelse .antal, .knap {
-    margin-bottom: 1rem;
+.beskrivelse h1, .beskrivelse h3, .beskrivelse .antal, .mobile-pay, .knap, p {
+    margin-bottom: 1.3rem;
 }
 
 .tallet1 {
@@ -163,7 +165,7 @@ header input {
     grid-template-columns: repeat(1, 1fr);
 }
 
-.list .item img {
+.list .item .daase img {
     width: auto;
     height: 60vh;
     object-fit: cover;
@@ -171,14 +173,24 @@ header input {
 
 .list .item button {
     width: 20rem;
-    margin-bottom: 10px;
 }
-
-.mobile-pay {
-    background-color: #5875FA;
-}   
-
 .daase {
     width: auto;
     margin: 0;
+    width: 70%;
+}
+
+.list .item a .mobile-pay {
+    background: white;
+    border: 3px solid #5a78ff;
+    object-fit: cover;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list .item a .mobile-pay img {
+    width: auto;
+    height: 80%;
 }

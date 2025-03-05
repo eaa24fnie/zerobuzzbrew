@@ -310,7 +310,7 @@ header .shopping span{
     padding: 20px;
     letter-spacing: 1px;
 }
-.list .item img{
+.list .item a img{
     width: 85%;
     height: auto;
     object-fit: cover;
