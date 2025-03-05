@@ -103,8 +103,11 @@ function renderProductList(filterType) {
     // Clear the list before re-rendering
     list.innerHTML = '';
 
-    // Filter products to only show "Pilsner"
-    let filteredProducts = products.filter(product => product.name === 'Pilsner');
+    // Get the current page's filename (without the .html extension)
+    const currentPage = window.location.pathname.split('/').pop().replace('.html', '');
+
+    // Filter products based on the current page's filename
+    let filteredProducts = products.filter(product => product.name.toLowerCase().replace(' ', '-') === currentPage.toLowerCase());
 
     // Sort the filtered products based on the selected filter type
     let sortedProducts = [...filteredProducts]; // Copy the filtered products to avoid modifying the original array
@@ -122,28 +125,26 @@ function renderProductList(filterType) {
         let imageName = value.image.split('/').pop().split('.')[0];
 
         newDiv.innerHTML = `
-            <div class="price">${value.price.toLocaleString()} kr</div>
-            <button onclick="addToCard(${value.id})">Add To Cart</button>
-
             <section class="produkt">
                 <section class="daaser">
                     <article class="daase">
                         <a href="${imageName}.html">
-                        <img src="../${value.image}" alt="${value.name}"> </a>  
+                            <img src="../${value.image}" alt="${value.name}">
+                        </a>  
                     </article>
-
                 </section>
-            <section class="beskrivelse">
-                <div>${value.name}</div>
-                <div>${value.price.toLocaleString()} kr</div>
-                <div>
-                    <button onclick="changeQuantity(${value.id}, ${value.quantity - 1})">-</button>
-                    <div class="count">${value.quantity}</div>
-                    <button onclick="changeQuantity(${value.id}, ${value.quantity + 1})">+</button>
-                </div>
-                <p>${value.description}</p>
-            </section>
-        </section>`;
+                <section class="beskrivelse">
+                    <h1>${value.name}</h1>
+                    <h3>${value.price.toLocaleString()} kr</h3>
+                    <article>
+                        <button class="knap" onclick="addToCard(${value.id})">Tilføj til kurv</button>
+                    </article>
+                    <article>
+                        <a href="../404.html" ><button class="knap mobile-pay">Betal med Mobile-pay</button>
+                    </article></a>
+                    <p>${value.description}</p>
+                </section>
+            </section>`;
 
         // Append the item to the list with a smooth transition
         list.appendChild(newDiv);
@@ -154,6 +155,7 @@ function renderProductList(filterType) {
         }, 10); // Small delay to trigger the transition
     });
 }
+
 
 
 // Handle adding items to the shopping cart

@@ -56,7 +56,7 @@ header input {
 
 .produkt {
     margin-top: 0;
-    padding-top: 20vh;
+    padding-top: 10vh;
     height: auto;
     width: 100%;
     display: flex;
@@ -66,6 +66,9 @@ header input {
     width: 50%;
     color: var(--black);
     font-family: var(--font);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .beskrivelse h1 {
@@ -106,10 +109,6 @@ header input {
 
 .beskrivelse h1, .beskrivelse h3, .beskrivelse .antal, .knap {
     margin-bottom: 1rem;
-}
-
-.mobile-pay {
-    background-color: #5875FA;
 }
 
 .tallet1 {
@@ -162,4 +161,24 @@ header input {
 
 .list {
     grid-template-columns: repeat(1, 1fr);
+}
+
+.list .item img {
+    width: auto;
+    height: 60vh;
+    object-fit: cover;
+}
+
+.list .item button {
+    width: 20rem;
+    margin-bottom: 10px;
+}
+
+.mobile-pay {
+    background-color: #5875FA;
+}   
+
+.daase {
+    width: auto;
+    margin: 0;
 }
