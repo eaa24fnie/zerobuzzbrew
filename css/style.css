@@ -343,6 +343,11 @@ header .shopping span {
     height: 60px;
     width: auto;
     margin-bottom: 100px;
+    transition: 0.2s ease-in;
+}
+
+.video a {
+    transition: 0.2s ease-out;
 }
 
 /* NYHED */
@@ -876,3 +881,7 @@ input[type=submit]:hover {
 
 
 /* FOOTER SLUTTER */
+
+html {
+    scroll-behavior: smooth;
+  }
