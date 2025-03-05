@@ -20,23 +20,23 @@ let products = [
         id: 1,
         name: 'Pilsner',
         image: 'img/pilsner.webp',
-        price: 25
+        price: 22
     },
     {
         id: 2,
-        name: 'Spiky-ginger',
+        name: 'Spiky Ginger',
         image: 'img/spiky-ginger.webp',
         price: 25
     },
     {
         id: 3,
-        name: 'Pinky-promise',
+        name: 'Pinky Promise',
         image: 'img/pinky-promise.webp',
         price: 25
     },
     {
         id: 4,
-        name: 'Basil-smash',
+        name: 'Basil Smash',
         image: 'img/basil-smash.webp',
         price: 25
     },
@@ -44,13 +44,13 @@ let products = [
         id: 5,
         name: 'Beetylychious',
         image: 'img/beetylychouis.webp',
-        price: 25
+        price: 28
     },
     {
         id: 6,
-        name: 'Berry bomb',
+        name: 'Berry Bomb',
         image: 'img/berry-bomb.webp',
-        price: 25
+        price: 28
     }
 ];
 let listCards  = [];
