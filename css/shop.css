@@ -90,6 +90,10 @@ header ul li, .logo, header .icon:not(:last-child) {
     filter: invert(100%); 
 }
 
+header ul a li:hover {
+    filter: invert(0%); 
+}
+
 
 
 header input {
@@ -281,7 +285,7 @@ header .shopping img{
 }
 
 header .shopping span{
-    background: red;
+    background: var(--primary-color);
     border-radius: 50%;
     display: flex;
     justify-content: center;
