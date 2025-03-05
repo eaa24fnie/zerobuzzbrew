@@ -84,7 +84,6 @@ header ul li {
 header input {
     width: 300px;
     height: 30px;
-    margin: 12px 20px 12px 20px;
     border-radius: 20px;
     color: var(--black);
     border: none;
@@ -99,6 +98,35 @@ header .icon {
 header .icon:nth-child(4) {
     height: 20px;
     margin-left: 20px;
+}
+
+.search-container {
+    width: 300px;
+    margin-right:20px;
+    color: var(--black);
+    border: none;
+}
+
+#searchInput { 
+    width: 100%; padding: 10px; 
+}
+
+.autocomplete { 
+    position: absolute; 
+    width: 20%; 
+    max-height: 150px; 
+    overflow-y: auto; 
+    display: none;
+    color: var(--white);
+    margin: 10px 0;
+}
+.autocomplete article {
+    padding: 10px; 
+    cursor: pointer;
+}
+.autocomplete div:hover, .autocomplete .selected {
+    background: var(--primary-color);
+    padding: 10px;
 }
 
 

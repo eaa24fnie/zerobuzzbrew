@@ -9,31 +9,32 @@
 
 <body>
   <header>
-      <!-- section med logo og menypunkter -->
-      <section>
+    <!-- section med logo og menypunkter -->
+  <section>
+    <!-- <img class="logo" src="img/zerobuzzbrew-lang.svg" alt="Zero Buzz Brew Logo"> -->
+    <a href="index.html">
+      <img class="logo" src="img/zerobuzzbrew-lang.svg" alt="Zero Buzz Brew Logo">
+    </a>
 
-          <img class="logo" src="img/zerobuzzbrew-lang.svg" alt="Zero Buzz Brew Logo">
+    <ul>
+      <a href="shop.html"><li>Webshop</li></a>
+      <a href="404.html"><li>Om Os</li></a>
+      <a href="404.html"><li>Merch</li></a>
+      <a href="404.html"><li>The Buzz Zone</li></a>
+    </ul>
+  </section>
 
-          <ul>
-              <a href="shop.html"><li>Webshop</li></a>
-              <a href="404.html"><li>Om Os</li></a>
-              <a href="404.html"><li>Merch</li></a>
-              <a href="404.html"><li>The Buzz Zone</li></a>
-          </ul>
-
-      </section>
-      <!-- Yoh kan du se dette? -->
-
-      <!-- section med søgefelt, kurv, login og hvilket land man køber fra -->
-      <section>
-
-          <input type="search" placeholder="Search..">
-          <img class="icon" src="img/account.svg" alt="account">
-          <img class="icon" src="img/shopping.svg" alt="shopping cart">
-          <img class="icon" src="img/denmark.svg" alt="sprog">
-
-        </section>
-  </header>
+  <!-- section med søgefelt, kurv, login og hvilket land man køber fra -->
+  <section>
+    <article class="search-container">
+      <input type="text" id="searchInput" placeholder="Search for a page...">
+      <article id="autocomplete" class="autocomplete"></article>
+    </article>
+    <img class="icon" src="img/account.svg" alt="account">
+    <img class="icon" src="img/shopping.svg" alt="shopping cart">
+    <img class="icon" src="img/denmark.svg" alt="sprog">
+  </section>
+</header>
 
   <main>
     <!-- Confirm age popup -->
@@ -255,6 +256,7 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/search.js"></script>
 
 </body>
 </html> 
