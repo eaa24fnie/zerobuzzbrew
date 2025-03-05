@@ -11,7 +11,7 @@ let quantity = document.querySelector('.quantity');
 // Add event listeners for opening and closing the shopping cart
 openShopping.addEventListener('click', () => {
     body.classList.add('active');
-});
+}); 
 closeShopping.addEventListener('click', () => {
     body.classList.remove('active');
 });
