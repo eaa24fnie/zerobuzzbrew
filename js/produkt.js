@@ -238,7 +238,8 @@ function renderRelatedProducts(currentProductId) {
 
     // Filter out the current product
     let relatedProducts = products
-        .filter(product => product.id !== currentProductId)
+    .filter(product => String(product.id) !== String(currentProductId))
+
         .sort((a, b) => b.popularity - a.popularity) // Sort by popularity (descending)
         .slice(0, 3); // Take the top 3
 
@@ -263,13 +264,9 @@ function renderRelatedProducts(currentProductId) {
     });
 }
 
-
-
 let currentProductId = 1; 
 renderRelatedProducts(currentProductId);
 
 // Initialize the app
 initApp();
-
-
 
