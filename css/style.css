@@ -135,7 +135,7 @@ header .icon:nth-child(4) {
 /* Popup om alder */
 
 /* Sløret baggrund */
-.overlay {
+/* .overlay {
     display: flex;
     position: fixed;
     top: 0;
@@ -147,7 +147,7 @@ header .icon:nth-child(4) {
     justify-content: center;
     align-items: center;
     z-index: 2000;
-}
+} */
 
 /* Popup boks */
 .popup {
