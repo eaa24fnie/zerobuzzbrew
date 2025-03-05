@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zero Buzz Brew</title>
+    <link rel="stylesheet" href="css/shop.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -31,7 +32,10 @@
       <article id="autocomplete" class="autocomplete"></article>
     </article>
     <img class="icon" src="img/account.svg" alt="account">
-    <img class="icon" src="img/shopping.svg" alt="shopping cart">
+    <div class="shopping">
+        <img class="kurv" src="/img/shopping.svg">
+        <span class="quantity">0</span>
+    </div>
     <img class="icon" src="img/denmark.svg" alt="sprog">
   </section>
 </header>
@@ -199,6 +203,16 @@
     </section>
   </main>
 
+  <div class="card">
+    <h1>KURV</h1>
+    <ul class="listCard">
+    </ul>
+    <div class="checkOut">
+        <div class="total">0</div>
+        <div class="closeShopping">Close</div>
+    </div>
+</div>
+
 
   <footer>
     <article class="kontakt">
@@ -249,6 +263,7 @@
     </section>
   </footer>
 
+  <script src="js/shop.js"></script>
   <script src="js/script.js"></script>
   <script src="js/search.js"></script>
 

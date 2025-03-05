@@ -1,5 +1,26 @@
 "use strict";
 
+function confirmAge(isOfAge) {
+    const overlay = document.getElementById("overlay");
+    const errorMessage = document.getElementById("errorMessage");
+
+    if (isOfAge) {
+        overlay.style.display = "none"; // Hide the popup
+        localStorage.setItem("ageConfirmed", "true"); // Store confirmation
+    } else {
+        errorMessage.classList.remove("hidden"); // Show error message
+    }
+}
+
+// Check if the user has already confirmed age
+window.onload = function () {
+    if (localStorage.getItem("ageConfirmed") === "true") {
+        document.getElementById("overlay").style.display = "none";
+    }
+};
+
+
+
 let openShopping = document.querySelector('.shopping');
 let closeShopping = document.querySelector('.closeShopping');
 let list = document.querySelector('.list');

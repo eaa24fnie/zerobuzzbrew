@@ -37,6 +37,10 @@ body {
 
 /* HEADER */
 
+header ul li, .logo, header .icon:not(:last-child), .kurv {
+    filter: invert(0%);
+}
+
 
 header {
     width: 100%;
