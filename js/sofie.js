@@ -19,37 +19,37 @@ let products = [
     {
         id: 1,
         name: 'Pilsner',
-        image: 'pilsner.webp',
+        image: 'img/pilsner.webp',
         price: 25
     },
     {
         id: 2,
         name: 'Spiky-ginger',
-        image: 'spiky-ginger.webp',
+        image: 'img/spiky-ginger.webp',
         price: 25
     },
     {
         id: 3,
         name: 'Pinky-promise',
-        image: 'pinky-promise.webp',
+        image: 'img/pinky-promise.webp',
         price: 25
     },
     {
         id: 4,
         name: 'Basil-smash',
-        image: 'basil-smash.webp',
+        image: 'img/basil-smash.webp',
         price: 25
     },
     {
         id: 5,
         name: 'Beetylychious',
-        image: 'images/beetylychious.webp',
+        image: 'img/beetylychouis.webp',
         price: 25
     },
     {
         id: 6,
         name: 'Berry bomb',
-        image: 'berry-bomb.webp',
+        image: 'img/berry-bomb.webp',
         price: 25
     }
 ];
@@ -59,7 +59,7 @@ function initApp(){
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
         newDiv.innerHTML = `
-            <img src="image/${value.image}">
+            <img src="${value.image}">
             <div class="title">${value.name}</div>
             <div class="price">${value.price.toLocaleString()}</div>
             <button onclick="addToCard(${key})">Add To Card</button>`;
@@ -85,7 +85,7 @@ function reloadCard(){
         if(value != null){
             let newDiv = document.createElement('li');
             newDiv.innerHTML = `
-                <div><img src="image/${value.image}"/></div>
+                <div><img src="${value.image}"/></div>
                 <div>${value.name}</div>
                 <div>${value.price.toLocaleString()}</div>
                 <div>
