@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 let openShopping = document.querySelector('.shopping');
 let closeShopping = document.querySelector('.closeShopping');
@@ -8,6 +8,7 @@ let body = document.querySelector('body');
 let total = document.querySelector('.total');
 let quantity = document.querySelector('.quantity');
 
+// Add event listeners for opening and closing the shopping cart
 openShopping.addEventListener('click', () => {
     body.classList.add('active');
 });
@@ -22,6 +23,7 @@ let products = [
         image: 'img/pilsner.webp',
         price: 22,
         dateAdded: '2023-01-15',
+        popularity: 100,
     },
     {
         id: 2,
@@ -29,6 +31,7 @@ let products = [
         image: 'img/spiky-ginger.webp',
         price: 25,
         dateAdded: '2023-02-15',
+        popularity: 30
     },
     {
         id: 3,
@@ -36,6 +39,7 @@ let products = [
         image: 'img/pinky-promise.webp',
         price: 25,
         dateAdded: '2023-04-15',
+        popularity: 40
     },
     {
         id: 4,
@@ -43,6 +47,7 @@ let products = [
         image: 'img/basil-smash.webp',
         price: 25,
         dateAdded: '2023-03-15',
+        popularity: 70
     },
     {
         id: 5,
@@ -50,6 +55,7 @@ let products = [
         image: 'img/beetylychouis.webp',
         price: 28,
         dateAdded: '2025-01-15',
+        popularity: 80
     },
     {
         id: 6,
@@ -57,16 +63,40 @@ let products = [
         image: 'img/berry-bomb.webp',
         price: 28,
         dateAdded: '2024-01-15',
+        popularity: 10
     }
 ];
 
 let listCards = [];
 
 function initApp() {
-    products.forEach((value, key) => {
+    // Add event listener to the filter dropdown
+    const filterOptions = document.getElementById('filterOptions');
+    filterOptions.addEventListener('change', () => {
+        renderProductList(filterOptions.value);
+    });
+
+    // Initial render of products
+    renderProductList(filterOptions.value);
+}
+
+function renderProductList(filterType) {
+    // Clear the list before re-rendering
+    list.innerHTML = '';
+
+    // Sort the products based on the selected filter type
+    let sortedProducts = [...products]; // Copy the products to avoid modifying the original array
+
+    if (filterType === 'newest') {
+        sortedProducts.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded));
+    } else if (filterType === 'popular') {
+        sortedProducts.sort((a, b) => b.popularity - a.popularity);
+    }
+
+    // Render the sorted products
+    sortedProducts.forEach((value, key) => {
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
-        // Extract the image name without the extension for the link
         let imageName = value.image.split('/').pop().split('.')[0];
 
         newDiv.innerHTML = `
@@ -80,11 +110,9 @@ function initApp() {
     });
 }
 
-initApp();
-
+// Handle adding items to the shopping cart
 function addToCard(key) {
     if (listCards[key] == null) {
-        // Copy product from list to list card
         listCards[key] = JSON.parse(JSON.stringify(products[key]));
         listCards[key].quantity = 1;
     }
@@ -95,13 +123,13 @@ function reloadCard() {
     listCard.innerHTML = '';
     let count = 0;
     let totalPrice = 0;
+
     listCards.forEach((value, key) => {
-        totalPrice = totalPrice + value.price;
-        count = count + value.quantity;
+        totalPrice += value.price;
+        count += value.quantity;
+
         if (value != null) {
             let newDiv = document.createElement('li');
-
-            // Extract the image name without the extension for the link
             let imageName = value.image.split('/').pop().split('.')[0];
 
             newDiv.innerHTML = `
@@ -131,3 +159,6 @@ function changeQuantity(key, quantity) {
     }
     reloadCard();
 }
+
+// Initialize the app
+initApp();

@@ -131,9 +131,17 @@ header input {
 .sortiment-tekst-dropdown {
     width: 25%;
     display: flex;
-    flex-direction: column;
     justify-content: flex-end;
     position: relative;
+    background: none;
+    border-style: none;
+    bottom: 0;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.sortiment-tekst-dropdown select {
+    color: var(--black);
 }
 
 button.dropbtn {
@@ -184,51 +192,13 @@ button.dropbtn {
   background-color: #f1f1f1;
 }
 
+
+
+
+
 header ul li, .logo, header .icon:not(:last-child), .kurv {
     filter: invert(100%);
 }
-
-/* .daaser {
-    width: 100%;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-}
-
-header input {
-    border: 1px solid var(--black);
-}
-
-
-
-
-.antal {
-    display: flex;
-    width: 40%;
-    background: var(--secondary-color);
-    padding: 10px;
-    border-radius: 20px 0 0 20px;
-    justify-content: space-evenly;
-}
-
-.antal img {
-    width: 10px;
-}
-
-.button button {
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-family: var(--font);
-    margin-left: 5px;
-}
-
-.shopcontainer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 20px; /
-  }
-     */
   
 .product {
     text-align: center; /*centrerer produktets info */
