@@ -98,6 +98,31 @@ header input {
 
 /* HEADER SLUT */
 
+/* CIRKLER */
+
+.forsidecirkel {
+    position: absolute; 
+    z-index: -1; 
+}
+
+.cirkel-1 {
+    margin-top: 15%;
+    margin-left: -40%;
+    width: 45rem;
+}
+
+.cirkel-2 {
+    margin-top: -75%;
+    margin-left: 150%;
+    width: 45rem;
+}
+
+.cirkel-3 {
+    margin-left: -60%;
+    margin-top: 30%;
+    width: 45rem;
+}
+
 
 /* SORTIMENT STARTER */
 .sortiment {

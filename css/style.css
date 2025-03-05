@@ -265,11 +265,11 @@ header .icon:nth-child(4) {
     transition: 0.2s ease-out;
 }
 
-/* NYHED */
+/* CIRKLER */
 
 .forsidecirkel {
-    position: absolute; /* Gør det muligt at placere cirklerne frit */
-    z-index: -1; /* Sender dem bagud */
+    position: absolute; 
+    z-index: -1; 
 }
 
 .cirkel-1 {
@@ -282,6 +282,8 @@ header .icon:nth-child(4) {
     margin-right: -200%;
     width: 50rem;
 }
+
+/* NYHED */
 
 .nyhed {
     width: 100%;
