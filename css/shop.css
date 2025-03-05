@@ -90,6 +90,10 @@ header ul li, .logo, header .icon:not(:last-child) {
     filter: invert(100%); 
 }
 
+header ul a li:hover {
+    filter: invert(0%); 
+}
+
 
 
 header input {
@@ -97,6 +101,31 @@ header input {
 }
 
 /* HEADER SLUT */
+
+/* CIRKLER */
+
+.forsidecirkel {
+    position: absolute; 
+    z-index: -1; 
+}
+
+.cirkel-1 {
+    margin-top: 15%;
+    margin-left: -40%;
+    width: 45rem;
+}
+
+.cirkel-2 {
+    margin-top: -75%;
+    margin-left: 150%;
+    width: 45rem;
+}
+
+.cirkel-3 {
+    margin-left: -60%;
+    margin-top: 30%;
+    width: 45rem;
+}
 
 
 /* SORTIMENT STARTER */
@@ -256,7 +285,7 @@ header .shopping img{
 }
 
 header .shopping span{
-    background: red;
+    background: var(--primary-color);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -372,3 +401,13 @@ header .shopping span{
     font-size: 1.5rem;
     font-weight: 500;
 }
+
+.item {
+    position: relative;
+    transition: transform 0.5s ease; 
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
