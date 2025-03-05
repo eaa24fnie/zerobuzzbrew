@@ -94,18 +94,14 @@ function renderProductList(filterType) {
     }
 
     // Render the sorted products
-    sortedProducts.forEach((value) => {
+    sortedProducts.forEach((value, key) => {
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
         let imageName = value.image.split('/').pop().split('.')[0];
 
         newDiv.innerHTML = `
-            <a href="produkter/${imageName}.html">
-                <img src="${value.image}" alt="${value.name}">
-            </a>
-            <div class="title">${value.name}</div>
             <div class="price">${value.price.toLocaleString()} kr</div>
-            <button onclick="addToCard(${value.id})">Add To Cart</button>`;
+            <button onclick="addToCard(${key})">Add To Card</button>`;
 
         // Append the item to the list with a smooth transition
         list.appendChild(newDiv);
@@ -118,17 +114,11 @@ function renderProductList(filterType) {
 }
 
 // Handle adding items to the shopping cart
-function addToCard(id) {
-    const product = products.find(product => product.id === id);
-    const index = listCards.findIndex(item => item.id === id);
-    
-    if (index === -1) {
-        product.quantity = 1;
-        listCards.push({...product});
-    } else {
-        listCards[index].quantity++;
+function addToCard(key) {
+    if (listCards[key] == null) {
+        listCards[key] = JSON.parse(JSON.stringify(products[key]));
+        listCards[key].quantity = 1;
     }
-    
     reloadCard();
 }
 
@@ -137,8 +127,8 @@ function reloadCard() {
     let count = 0;
     let totalPrice = 0;
 
-    listCards.forEach((value) => {
-        totalPrice += value.price * value.quantity;
+    listCards.forEach((value, key) => {
+        totalPrice += value.price;
         count += value.quantity;
 
         if (value != null) {
@@ -152,9 +142,9 @@ function reloadCard() {
                 <div>${value.name}</div>
                 <div>${value.price.toLocaleString()} kr</div>
                 <div>
-                    <button onclick="changeQuantity(${value.id}, ${value.quantity - 1})">-</button>
+                    <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
                     <div class="count">${value.quantity}</div>
-                    <button onclick="changeQuantity(${value.id}, ${value.quantity + 1})">+</button>
+                    <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
                 </div>`;
             listCard.appendChild(newDiv);
         }
@@ -163,15 +153,13 @@ function reloadCard() {
     quantity.innerText = count;
 }
 
-function changeQuantity(id, quantity) {
-    const index = listCards.findIndex(item => item.id === id);
-    
+function changeQuantity(key, quantity) {
     if (quantity == 0) {
-        listCards.splice(index, 1); // Remove the item from the list
+        delete listCards[key];
     } else {
-        listCards[index].quantity = quantity;
+        listCards[key].quantity = quantity;
+        listCards[key].price = quantity * products[key].price;
     }
-
     reloadCard();
 }
 

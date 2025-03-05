@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zero Buzz Brew</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/shop.css">
     <link rel="stylesheet" href="../css/produkt.css">
+    <link rel="stylesheet" href="../css/shop.css">
 </head>
 <body>
   <header>
@@ -56,15 +56,31 @@
             <h1>Pilsner - Zero Buzz Brew</h1>
             <input type="number" id="beer-price" value="24,95" class="form-control java" disabled>
             <article class="antal">
-                <button class="btn btn-danger btn-sm java" onclick="removeFromCart('beer');"><img id="minus" src="../img/minus.svg" alt="Minus"></button>
-                <input type="number" name="beer" id="beer" value="0"  class="form-control java" disabled>
-                <button class="btn btn-success btn-sm java" onclick="addToCart('beer');"><img id="plus" src="../img/plus.svg" alt="Plus"></button>
+               
             </article>
-            <button class="knap">TILFØJ TIL KURV +</button> 
+            <div class="box">
+      
+              <div class="list">
+                
+              </div>
+          </div>
+          
+          <div class="card">
+              <h1>KURV</h1>
+              <ul class="listCard">
+              </ul>
+              <div class="checkOut">
+                  <div class="total">0</div>
+                  <div class="closeShopping">Close</div>
+              </div>
+          </div>
+      
             <button class="knap mobile-pay">BETAL MED MOBILE-PAY</button> 
             <p>Vores pilsner er klar og let, med et lille friskt citronpift, der giver den en skøn, let syrlig smag. Skummet er dejligt og fyldigt, og de tyske humler giver en fin bitterhed, som passer perfekt til den friske smag. Det er en læskende og forfriskende pilsner, som er nem at nyde, og som giver dig en klassisk øl med et lille ekstra twist.</p>
         </section>
     </section>
+
+
 
 
 
@@ -132,8 +148,8 @@
         </section>
     </footer>
 
+    <script src="../js/produkt.js"></script>
     <script src="../js/script.js"></script>
-    <script src="../js/shop.js"></script>
-    <script src="js/search.js"></script>
+    <script src="../js/search.js"></script>
 </body>
 </html> 
