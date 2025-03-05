@@ -126,13 +126,6 @@ header input {
     font-size: 1.5rem;
 }
 
-.andre {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 10%;
-}
-
 .relateret {
     display: flex;
     background: var(--white);
@@ -267,4 +260,11 @@ header input {
 .list .item a .mobile-pay img {
     width: auto;
     height: 80%;
+}
+
+.related-products {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10%;
 }

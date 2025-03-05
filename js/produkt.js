@@ -57,7 +57,7 @@ let products = [
     {
         id: 5,
         name: 'Beetylychious',
-        image: 'img/beetylychouis.webp',
+        image: 'img/beetylychious.webp',
         price: 28,
         dateAdded: '2025-01-15',
         popularity: 80,
@@ -228,5 +228,48 @@ function saveCartToStorage() {
     localStorage.setItem('cart', JSON.stringify(listCards));
 }
 
+function renderRelatedProducts(currentProductId) {
+    let relatedProductsContainer = document.querySelector('.related-products');
+
+    if (!relatedProductsContainer) {
+        console.warn('No container found for related products.');
+        return;
+    }
+
+    // Filter out the current product
+    let relatedProducts = products
+        .filter(product => product.id !== currentProductId)
+        .sort((a, b) => b.popularity - a.popularity) // Sort by popularity (descending)
+        .slice(0, 3); // Take the top 3
+
+    relatedProductsContainer.innerHTML = ''; // Clear previous content
+
+    relatedProducts.forEach(product => {
+        let productDiv = document.createElement('section');
+        productDiv.classList.add('related-item');
+        
+        let imageName = product.image.split('/').pop().split('.')[0];
+
+        productDiv.innerHTML = `
+            <section>
+                        <a href="${imageName}.html"> <article class="relateret">
+                            <img src="../${product.image}" alt="${product.name}">
+                            </article>
+                        </a>  
+                    </section>
+        `;
+
+        relatedProductsContainer.appendChild(productDiv);
+    });
+}
+
+
+
+let currentProductId = 1; 
+renderRelatedProducts(currentProductId);
+
 // Initialize the app
 initApp();
+
+
+

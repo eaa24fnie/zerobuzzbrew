@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Buzz Brew</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/shop.css">
+    <link rel="stylesheet" href="../css/produkt.css">
+</head>
+<body>
+  <header>
+    <!-- section med logo og menypunkter -->
+    <section>
+
+        <a href="../index.html">
+          <img class="logo" src="../img/zerobuzzbrew-lang.svg" alt="Zero Buzz Brew Logo">
+        </a>
+
+        <ul>
+            <a href="../shop.html"><li>Webshop</li></a>
+            <a href="../404.html"><li>Om Os</li></a>
+            <a href="../404.html"><li>Merch</li></a>
+            <a href="../404.html"><li>The Buzz Zone</li></a>
+        </ul>
+
+    </section>
+    <!-- section med søgefelt, kurv, login og hvilket land man køber fra -->
+    <section>
+
+      <article class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for a page...">
+        <article id="autocomplete" class="autocomplete"></article>
+      </article>
+        <img class="icon" src="../img/account.svg" alt="account">
+        <section class="shopping">
+          <img class="kurv" src="/img/shopping.svg">
+          <span class="quantity">0</span>
+      </section>
+        <img class="icon" src="../img/denmark.svg" alt="sprog">
+
+      </section>
+</header>
+
+    <section class="box">
+      <section class="sortiment-tekst">
+        
+          <article class="sortiment-tekst-dropdown">
+            <select id="filterOptions" class="dropbtn">
+              <option value="popular">Most Popular</option>
+              <option value="newest">Newest</option>
+            </select>
+          </article>
+          
+        </section>
+
+      <section class="list">
+        
+      </section>
+  </section>
+  
+  <section class="card">
+      <h1>KURV</h1>
+      <ul class="listCard">
+      </ul>
+      <section class="checkOut">
+          <section class="total">0</section>
+          <section class="closeShopping">Close</section>
+      </section>
+  </section>
+
+    <h3 class="relaterede">RELATEREDE PRODUKTER</h3>
+
+    <section class="related-products"></section>
+
+
+    <footer>
+        <article class="kontakt">
+            <form action="/action_page.php">
+                <section class="container">
+                  <h2>Kontakt</h2>
+                </section>
+
+                <section class="container">
+                    <input type="text" placeholder="Navn" name="name" required>
+                  </section>
+              
+                <section class="container">
+                  <input type="email" placeholder="E-mail" name="mail" required>
+                </section>
+
+                <section class="container">
+                    <textarea id="subject" name="subject" placeholder="Besked"></textarea>
+                  </section>
+              
+                <section class="container">
+                  <input type="submit" value="Send">
+                </section>
+              </form>
+    
+        </article>
+        <section class="footer">
+            <article class="some">
+                <a href="404.html"><img src="../img/facebook.svg" alt="Facebook"></a>
+               <a href="404.html"><img src="../img/instagram.svg" alt="instagram"></a>
+            </article>
+            <article class="nyhedsbrev">
+            <form action="/action_page.php">
+                <section class="container">
+                  <h2>Nyhedsbrev</h2>
+                </section>
+              
+                <section class="container">
+                  <input type="email" placeholder="E-mail" name="mail" required>
+                </section>
+              
+                <section class="container">
+                  <input type="submit" value="Send">
+                </section>
+              </form>
+            </article>
+        </section>
+    </footer>
+
+    <script src="../js/produkt.js"></script>
+    <script src="..js/shop.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+</html> 

@@ -52,7 +52,7 @@ let products = [
     {
         id: 5,
         name: 'Beetylychious',
-        image: 'img/beetylychouis.webp',
+        image: 'img/beetylychious.webp',
         price: 28,
         dateAdded: '2025-01-15',
         popularity: 80

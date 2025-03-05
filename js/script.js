@@ -70,7 +70,7 @@ let products = [
     {
         id: 3,
         name: 'PRODUCT NAME 3',
-        image: 'img/beetylychouis.webp',
+        image: 'img/beetylychious.webp',
         price: 25,
     },
     {
