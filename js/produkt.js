@@ -120,7 +120,7 @@ function renderProductList(filterType) {
 
     // Render the sorted products
     sortedProducts.forEach((value) => {
-        let newDiv = document.createElement('div');
+        let newDiv = document.createElement('section');
         newDiv.classList.add('item');
         let imageName = value.image.split('/').pop().split('.')[0];
 

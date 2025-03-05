@@ -413,3 +413,10 @@ header .shopping span{
     transform: scale(1.05);
 }
 
+#autocomplete {
+    color: var(--black);
+}
+
+#autocomplete div:hover {
+    color: var(--white);
+}
