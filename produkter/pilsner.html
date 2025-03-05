@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zero Buzz Brew</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/produkt.css">
     <link rel="stylesheet" href="../css/shop.css">
+    <link rel="stylesheet" href="../css/produkt.css">
 </head>
 <body>
   <header>
@@ -25,8 +25,6 @@
         </ul>
 
     </section>
-    <!-- Yoh kan du se dette? -->
-
     <!-- section med søgefelt, kurv, login og hvilket land man køber fra -->
     <section>
 
@@ -40,11 +38,9 @@
 
       </section>
 </header>
-    <div class="list"></div>
 
 
     <section class="produkt">
-        </article>
         <section class="daaser">
             <article class="daase">
                 <img src="../img/pilsner.webp" alt="Pilsner">
@@ -54,26 +50,7 @@
         </section>
         <section class="beskrivelse">
             <h1>Pilsner - Zero Buzz Brew</h1>
-            <input type="number" id="beer-price" value="24,95" class="form-control java" disabled>
-            <article class="antal">
-               
-            </article>
-            <div class="box">
-      
-              <div class="list">
-                
-              </div>
-          </div>
-          
-          <div class="card">
-              <h1>KURV</h1>
-              <ul class="listCard">
-              </ul>
-              <div class="checkOut">
-                  <div class="total">0</div>
-                  <div class="closeShopping">Close</div>
-              </div>
-          </div>
+            <button onclick="addToCard(Pilsner)">Tilføj til kurv</button>
       
             <button class="knap mobile-pay">BETAL MED MOBILE-PAY</button> 
             <p>Vores pilsner er klar og let, med et lille friskt citronpift, der giver den en skøn, let syrlig smag. Skummet er dejligt og fyldigt, og de tyske humler giver en fin bitterhed, som passer perfekt til den friske smag. Det er en læskende og forfriskende pilsner, som er nem at nyde, og som giver dig en klassisk øl med et lille ekstra twist.</p>
@@ -81,7 +58,32 @@
     </section>
 
 
+    <div class="box">
+      <section class="sortiment-tekst">
+        
+          <article class="sortiment-tekst-dropdown">
+            <select id="filterOptions" class="dropbtn">
+              <option value="popular">Most Popular</option>
+              <option value="newest">Newest</option>
+            </select>
+          </article>
+          
+        </section>
 
+      <div class="list">
+        
+      </div>
+  </div>
+  
+  <div class="card">
+      <h1>KURV</h1>
+      <ul class="listCard">
+      </ul>
+      <div class="checkOut">
+          <div class="total">0</div>
+          <div class="closeShopping">Close</div>
+      </div>
+  </div>
 
 
     <h3 class="relaterede">RELATEREDE PRODUKTER</h3>
@@ -149,6 +151,7 @@
     </footer>
 
     <script src="../js/produkt.js"></script>
+    <script src="..js/shop.js"></script>
     <script src="../js/script.js"></script>
     <script src="../js/search.js"></script>
 </body>

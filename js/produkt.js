@@ -24,6 +24,8 @@ let products = [
         price: 22,
         dateAdded: '2023-01-15',
         popularity: 100,
+        description: 'Vores pilsner er klar og let, med et lille friskt citronpift, der giver den en skøn, let syrlig smag. Skummet er dejligt og fyldigt, og de tyske humler giver en fin bitterhed, som passer perfekt til den friske smag. Det er en læskende og forfriskende pilsner, som er nem at nyde, og som giver dig en klassisk øl med et lille ekstra twist.'
+
     },
     {
         id: 2,
@@ -31,7 +33,8 @@ let products = [
         image: 'img/spiky-ginger.webp',
         price: 25,
         dateAdded: '2023-02-15',
-        popularity: 30
+        popularity: 30,
+        description: 'En lager, der sparker igennem med en krydret ingefærsmag og et skarpt syrligt twist fra havtorn. Guld- og orangefarvet, sprudlende og fyldt med liv, denne øl leverer både varme og friskhed i hver slurk. En perfekt balance mellem krydderi og syre, der får dine smagsløg til at danse.'
     },
     {
         id: 3,
@@ -39,7 +42,8 @@ let products = [
         image: 'img/pinky-promise.webp',
         price: 25,
         dateAdded: '2023-04-15',
-        popularity: 40
+        popularity: 40,
+        description: 'En livlig og sprudlende sour med en smuk lyserød farve, der kombinerer sødmen fra hindbær med den skarpe, næsten vinøse syre fra ribs. Denne øl er en kærlighedserklæring til de frugtige smage, der er både forfriskende og uforglemmelige. Perfekt til dem, der elsker en sour med et twist.'
     },
     {
         id: 4,
@@ -47,7 +51,8 @@ let products = [
         image: 'img/basil-smash.webp',
         price: 25,
         dateAdded: '2023-03-15',
-        popularity: 70
+        popularity: 70,
+        description: 'En lys grøn IPA, der rammer dig med et friskt basilikumsslag og en sprød limefinish. Denne øl kombinerer det bedste fra krydderurterne og den sprudlende citrus for at skabe en levende, let bitter smagsoplevelse. Perfekt for den, der søger noget ekstra i sin IPA'
     },
     {
         id: 5,
@@ -55,7 +60,8 @@ let products = [
         image: 'img/beetylychouis.webp',
         price: 28,
         dateAdded: '2025-01-15',
-        popularity: 80
+        popularity: 80,
+        description: 'En mørkerød brown ale, hvor den eksotiske sødme fra lychee møder den jordnære dybde fra rødbede. En fyldig og kompleks smagsoplevelse, der bringer et lækkert mix af frugt og jord til din gane. Den perfekte kombination af sødme og umami, der efterlader et varigt indtryk.'
     },
     {
         id: 6,
@@ -63,13 +69,26 @@ let products = [
         image: 'img/berry-bomb.webp',
         price: 28,
         dateAdded: '2024-01-15',
-        popularity: 10
+        popularity: 10,
+        description: 'En dyb lilla Double IPA, der byder på en intens brombærsmag, som blander sig med den kraftige syre fra solbær. Denne øl har en fyldig maltbase, der understøtter de frugtagtige noter og en markant humlebitterhed, som giver en stærk og kompleks smagsoplevelse. Med sin kraftige alkoholfrie karakter og frugtige twist er denne IPA perfekt til dem, der ønsker en dristig og læskende øl, hvor bær og humle mødes i en intens, men afbalanceret symfoni.'
     }
 ];
 
 let listCards = [];
 
+// Load cart data from localStorage on app initialization
+function loadCartFromStorage() {
+    const savedCart = localStorage.getItem('cart');
+    if (savedCart) {
+        listCards = JSON.parse(savedCart);
+        reloadCard();
+    }
+}
+
 function initApp() {
+    // Load cart data when the app initializes
+    loadCartFromStorage();
+
     // Add event listener to the filter dropdown
     const filterOptions = document.getElementById('filterOptions');
     filterOptions.addEventListener('change', () => {
@@ -84,8 +103,11 @@ function renderProductList(filterType) {
     // Clear the list before re-rendering
     list.innerHTML = '';
 
-    // Sort the products based on the selected filter type
-    let sortedProducts = [...products]; // Copy the products to avoid modifying the original array
+    // Filter products to only show "Pilsner"
+    let filteredProducts = products.filter(product => product.name === 'Pilsner');
+
+    // Sort the filtered products based on the selected filter type
+    let sortedProducts = [...filteredProducts]; // Copy the filtered products to avoid modifying the original array
 
     if (filterType === 'newest') {
         sortedProducts.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded));
@@ -94,14 +116,34 @@ function renderProductList(filterType) {
     }
 
     // Render the sorted products
-    sortedProducts.forEach((value, key) => {
+    sortedProducts.forEach((value) => {
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
         let imageName = value.image.split('/').pop().split('.')[0];
 
         newDiv.innerHTML = `
             <div class="price">${value.price.toLocaleString()} kr</div>
-            <button onclick="addToCard(${key})">Add To Card</button>`;
+            <button onclick="addToCard(${value.id})">Add To Cart</button>
+
+            <section class="produkt">
+                <section class="daaser">
+                    <article class="daase">
+                        <a href="${imageName}.html">
+                        <img src="../${value.image}" alt="${value.name}"> </a>  
+                    </article>
+
+                </section>
+            <section class="beskrivelse">
+                <div>${value.name}</div>
+                <div>${value.price.toLocaleString()} kr</div>
+                <div>
+                    <button onclick="changeQuantity(${value.id}, ${value.quantity - 1})">-</button>
+                    <div class="count">${value.quantity}</div>
+                    <button onclick="changeQuantity(${value.id}, ${value.quantity + 1})">+</button>
+                </div>
+                <p>${value.description}</p>
+            </section>
+        </section>`;
 
         // Append the item to the list with a smooth transition
         list.appendChild(newDiv);
@@ -113,12 +155,22 @@ function renderProductList(filterType) {
     });
 }
 
+
 // Handle adding items to the shopping cart
-function addToCard(key) {
-    if (listCards[key] == null) {
-        listCards[key] = JSON.parse(JSON.stringify(products[key]));
-        listCards[key].quantity = 1;
+function addToCard(id) {
+    const product = products.find(product => product.id === id);
+    const index = listCards.findIndex(item => item.id === id);
+    
+    if (index === -1) {
+        product.quantity = 1;
+        listCards.push({...product});
+    } else {
+        listCards[index].quantity++;
     }
+    
+    // Save the cart to localStorage
+    saveCartToStorage();
+
     reloadCard();
 }
 
@@ -127,8 +179,8 @@ function reloadCard() {
     let count = 0;
     let totalPrice = 0;
 
-    listCards.forEach((value, key) => {
-        totalPrice += value.price;
+    listCards.forEach((value) => {
+        totalPrice += value.price * value.quantity;
         count += value.quantity;
 
         if (value != null) {
@@ -136,15 +188,15 @@ function reloadCard() {
             let imageName = value.image.split('/').pop().split('.')[0];
 
             newDiv.innerHTML = `
-                <a href="produkter/${imageName}.html">
-                    <img src="${value.image}" alt="${value.name}">
+                <a href="${imageName}.html">
+                    <img src="../${value.image}" alt="${value.name}">
                 </a>
                 <div>${value.name}</div>
                 <div>${value.price.toLocaleString()} kr</div>
                 <div>
-                    <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
+                    <button onclick="changeQuantity(${value.id}, ${value.quantity - 1})">-</button>
                     <div class="count">${value.quantity}</div>
-                    <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
+                    <button onclick="changeQuantity(${value.id}, ${value.quantity + 1})">+</button>
                 </div>`;
             listCard.appendChild(newDiv);
         }
@@ -153,14 +205,25 @@ function reloadCard() {
     quantity.innerText = count;
 }
 
-function changeQuantity(key, quantity) {
+// Handle changing item quantity
+function changeQuantity(id, quantity) {
+    const index = listCards.findIndex(item => item.id === id);
+    
     if (quantity == 0) {
-        delete listCards[key];
+        listCards.splice(index, 1); // Remove the item from the list
     } else {
-        listCards[key].quantity = quantity;
-        listCards[key].price = quantity * products[key].price;
+        listCards[index].quantity = quantity;
     }
+
+    // Save the updated cart to localStorage
+    saveCartToStorage();
+
     reloadCard();
+}
+
+// Save cart data to localStorage
+function saveCartToStorage() {
+    localStorage.setItem('cart', JSON.stringify(listCards));
 }
 
 // Initialize the app

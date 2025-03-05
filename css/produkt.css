@@ -151,3 +151,15 @@ header input {
     border-style: none;
     width: 100%;
 }
+
+.dropbtn {
+    display: none;
+}
+
+.sortiment-tekst {
+    display: none;
+}
+
+.list {
+    grid-template-columns: repeat(1, 1fr);
+}

@@ -69,7 +69,19 @@ let products = [
 
 let listCards = [];
 
+// Load cart data from localStorage on app initialization
+function loadCartFromStorage() {
+    const savedCart = localStorage.getItem('cart');
+    if (savedCart) {
+        listCards = JSON.parse(savedCart);
+        reloadCard();
+    }
+}
+
 function initApp() {
+    // Load cart data when the app initializes
+    loadCartFromStorage();
+
     // Add event listener to the filter dropdown
     const filterOptions = document.getElementById('filterOptions');
     filterOptions.addEventListener('change', () => {
@@ -129,6 +141,9 @@ function addToCard(id) {
         listCards[index].quantity++;
     }
     
+    // Save the cart to localStorage
+    saveCartToStorage();
+
     reloadCard();
 }
 
@@ -163,6 +178,7 @@ function reloadCard() {
     quantity.innerText = count;
 }
 
+// Handle changing item quantity
 function changeQuantity(id, quantity) {
     const index = listCards.findIndex(item => item.id === id);
     
@@ -172,7 +188,15 @@ function changeQuantity(id, quantity) {
         listCards[index].quantity = quantity;
     }
 
+    // Save the updated cart to localStorage
+    saveCartToStorage();
+
     reloadCard();
+}
+
+// Save cart data to localStorage
+function saveCartToStorage() {
+    localStorage.setItem('cart', JSON.stringify(listCards));
 }
 
 // Initialize the app
