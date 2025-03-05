@@ -74,7 +74,7 @@ function initApp() {
                 <img src="${value.image}" alt="${value.name}">
             </a>
             <div class="title">${value.name}</div>
-            <div class="price">${value.price.toLocaleString()}</div>
+            <div class="price">${value.price.toLocaleString()} kr</div>
             <button onclick="addToCard(${key})">Add To Card</button>`;
         list.appendChild(newDiv);
     });
@@ -109,7 +109,7 @@ function reloadCard() {
                     <img src="${value.image}" alt="${value.name}">
                 </a>
                 <div>${value.name}</div>
-                <div>${value.price.toLocaleString()}</div>
+                <div>${value.price.toLocaleString()} kr</div>
                 <div>
                     <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
                     <div class="count">${value.quantity}</div>
@@ -118,7 +118,7 @@ function reloadCard() {
             listCard.appendChild(newDiv);
         }
     });
-    total.innerText = totalPrice.toLocaleString();
+    total.innerText = totalPrice.toLocaleString() + ' kr';
     quantity.innerText = count;
 }
 
