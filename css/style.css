@@ -495,6 +495,12 @@ button.dropbtn {
     width: 10px;
 }
 
+/* Hover-effekt på vores 3 favorit produkter */
+.forsidebillede:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    cursor: pointer; 
+}
 
 
 /* FAVORITTER SLUTTER */
