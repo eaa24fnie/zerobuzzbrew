@@ -13,14 +13,14 @@ function confirmAge(isOfAge) {
         // Vis fejlbesked
         errorMessage.classList.remove('hidden');
     }
-}
+} 
 
 // Sørg for, at pop-up'en vises, hvis brugeren ikke tidligere har bekræftet sin alder
 window.onload = function() {
     if (localStorage.getItem('ageVerified') !== 'true') {
         document.getElementById('overlay').style.display = 'flex';
     }
-};
+}; 
 
 
 document.addEventListener("DOMContentLoaded", function() {
