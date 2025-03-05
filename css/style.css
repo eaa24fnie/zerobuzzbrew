@@ -344,7 +344,6 @@ header .icon:nth-child(4) {
 }
 
 
-
 /* FAVORITTER STARTER */
 
 .favoritter {
@@ -388,7 +387,7 @@ button.dropbtn {
     font-size: 22px;
 }
 
-* Style the dropdown button */
+/* Style the dropdown button */
 .dropbtn {
   background-color: #ffffff;
   color: var(--black);
