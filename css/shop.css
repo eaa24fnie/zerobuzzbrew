@@ -372,3 +372,13 @@ header .shopping span{
     font-size: 1.5rem;
     font-weight: 500;
 }
+
+.item {
+    position: relative;
+    transition: transform 0.5s ease; 
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
