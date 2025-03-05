@@ -278,10 +278,6 @@ header .icon:nth-child(4) {
     width: 50rem;
 }
 
-.cirkel-2 {
-    margin-right: -200%;
-    width: 50rem;
-}
 
 /* NYHED */
 
@@ -503,6 +499,24 @@ button.dropbtn {
     cursor: pointer; 
 }
 
+.se-alle {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.se-alle a {
+    font-size: 24px;
+    font-weight: 300;
+    color: #161616;
+    text-decoration: none;
+}
+
+.se-alle a:hover {
+    text-decoration: underline;
+    color: #161616;
+}
+
 
 /* FAVORITTER SLUTTER */
 
@@ -514,7 +528,7 @@ button.dropbtn {
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 20% 15% 10%;
+    padding: 15% 15% 10%;
     gap: 10%; 
 }
 
