@@ -571,36 +571,6 @@ button.dropbtn {
 
 /* USER STORIES */
 
-/* .user-stories {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    padding: 10% 15%;
-    gap: 5%; 
-}
-
-.user-stories span {
-    font-size: 200px;
-    font-family: var(--font);
-}
-
-.user-stories p {
-    font-size: 30px;
-    font-weight: 300;
-}
-
-.citation-venstre {
-    left: 0%;
-    margin-bottom: -10rem;
-    color: var(--primary-color);
-}
-
-.citation-højre {
-    left: 0%;
-    color: var(--primary-color);
-} */
-
 /* USER STORIES */
 .user-stories {
     display: flex;
@@ -625,8 +595,20 @@ button.dropbtn {
     position: absolute;
 }
 
-.citation-venstre {
-    top: -8rem; /* Justér denne værdi for at rykke citationstegnet tættere på teksten */
+.citation1-venstre {
+    top: -9rem; /* Justér denne værdi for at rykke citationstegnet tættere på teksten */
+    left: 0rem;
+    color: var(--primary-color);
+}
+
+.citation2-venstre {
+    top: -6.5rem; /* Justér denne værdi for at rykke citationstegnet tættere på teksten */
+    left: 0rem;
+    color: var(--primary-color);
+}
+
+.citation3-venstre {
+    top: -6.5rem; /* Justér denne værdi for at rykke citationstegnet tættere på teksten */
     left: 0rem;
     color: var(--primary-color);
 }
@@ -636,7 +618,6 @@ button.dropbtn {
     right: 0rem;
     color: var(--primary-color);
 }
-
 
 /* VÆRDI SEKTION */
 .tekst-1 {

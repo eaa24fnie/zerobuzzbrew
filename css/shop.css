@@ -188,6 +188,13 @@ header ul li, .logo, header .icon:not(:last-child), .kurv {
     filter: invert(100%);
 }
 
+/* .daaser {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
 header input {
     border: 1px solid var(--black);
 }
@@ -221,9 +228,10 @@ header input {
     grid-template-columns: repeat(4, 1fr); 
     gap: 20px; /
   }
+     */
   
-  .product {
-    text-align: center; /* centrerer produktets info */
+.product {
+    text-align: center; /*centrerer produktets info */
     width: 50%;
     margin: 25% 0% 0% 25%;
     cursor: pointer; /* ændrer cursoren til 'hand' */
