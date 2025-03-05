@@ -150,6 +150,7 @@ header input {
     font-family: var(--headline);
     font-size: 80px;
     color: var(--secondary-color);
+    padding-bottom: 10%;
 }
 
 .overskrift {
@@ -254,8 +255,9 @@ header ul li, .logo, header .icon:not(:last-child), .kurv {
     display: flex;
     justify-content: center; 
     font-size: 4rem;
-    margin-top: 4rem;
+    margin-top: 10rem;
     color: var(--secondary-color);
+
 }
 
  .infographic {
@@ -309,7 +311,7 @@ header .shopping span{
     letter-spacing: 1px;
 }
 .list .item img{
-    width: 100%;
+    width: 85%;
     height: auto;
     object-fit: cover;
 }
