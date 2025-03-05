@@ -20,7 +20,7 @@ window.onload = function() {
     if (localStorage.getItem('ageVerified') !== 'true') {
         document.getElementById('overlay').style.display = 'flex';
     }
-}; 
+};
 
 
 document.addEventListener("DOMContentLoaded", function() {
