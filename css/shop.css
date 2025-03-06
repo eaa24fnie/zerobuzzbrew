@@ -392,6 +392,7 @@ header .shopping span{
 }
 .listCard li img{
     width: 90%;
+    padding-left: 1rem;
 }
 .listCard li button{
     background-color: #fff5;
