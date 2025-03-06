@@ -135,6 +135,10 @@ header .icon:nth-child(4) {
     width: 100%; padding: 10px; 
 }
 
+input::placeholder {
+    color: var(--black);
+}
+
 .autocomplete { 
     position: absolute; 
     width: 20%; 
@@ -515,6 +519,7 @@ button.dropbtn {
 .daase img {
     width: 100%;
     height: auto;
+    transition: all 0.3s ease;
 }
 
 .antal {
@@ -532,10 +537,9 @@ button.dropbtn {
 
 /* Hover-effekt på vores 3 favorit produkter */
 .forsidebillede:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) translateY(-9px);
     filter: brightness(1.1);
     cursor: pointer; 
-    transition: all 0.3s ease;
 }
 
 .se-alle {
@@ -558,8 +562,6 @@ button.dropbtn {
 
 
 /* FAVORITTER SLUTTER */
-
-/* USER STORIES */
 
 /* USER STORIES */
 .user-stories {
@@ -791,10 +793,10 @@ input[type=submit]:hover {
     border: none;
 }
 
-::placeholder {
+::placeholder, input::placeholder {
     color: var(--white);
     opacity: 0.6;
-  }
+}
 
   input, select, textarea{
     color: var(--white);
