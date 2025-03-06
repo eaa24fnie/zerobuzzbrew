@@ -1,5 +1,6 @@
 "use strict";
 
+// Funktion til at bekræfte alder
 function confirmAge(isOfAge) {
     const overlay = document.getElementById("overlay");
     const errorMessage = document.getElementById("errorMessage");
