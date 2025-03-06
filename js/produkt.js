@@ -135,7 +135,7 @@ function renderProductList(filterType) {
                 </section>
                 <section class="beskrivelse">
                     <h1>${value.name}</h1>
-                    <h3>${value.price.toLocaleString()} kr</h3>
+                    <h3>${value.price.toLocaleString()},00 DKK</h3>
                     <article>
                         <button class="knap" onclick="addToCard(${value.id})">Tilføj til kurv</button>
                     </article>
@@ -203,7 +203,7 @@ function reloadCard() {
             listCard.appendChild(newDiv);
         }
     });
-    total.innerText = totalPrice.toLocaleString() + ' DKK';
+    total.innerText = totalPrice.toLocaleString() + ',00 DKK';
     quantity.innerText = count;
 }
 
