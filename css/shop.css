@@ -150,7 +150,7 @@ header input {
     font-family: var(--headline);
     font-size: 80px;
     color: var(--secondary-color);
-    padding-bottom: 10%;
+    padding-bottom: 3%;
 }
 
 .overskrift {
