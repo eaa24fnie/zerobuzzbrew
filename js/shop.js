@@ -17,7 +17,7 @@ window.onload = function () {
     if (localStorage.getItem("ageConfirmed") === "true") {
         document.getElementById("overlay").style.display = "none";
     }
-};
+}; 
 
 
 
@@ -107,7 +107,7 @@ function initApp() {
     const filterOptions = document.getElementById('filterOptions');
     filterOptions.addEventListener('change', () => {
         renderProductList(filterOptions.value);
-    });
+    }); 
 
     // Initial render of products
     renderProductList(filterOptions.value);

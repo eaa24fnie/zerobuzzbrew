@@ -13,7 +13,7 @@ function confirmAge(isOfAge) {
         // Vis fejlbesked
         errorMessage.classList.remove('hidden');
     }
-} 
+}  
 
 // Sørg for, at pop-up'en vises, hvis brugeren ikke tidligere har bekræftet sin alder
 window.onload = function() {
