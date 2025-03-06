@@ -16,7 +16,7 @@ const searchInput = document.getElementById("searchInput");
         searchInput.addEventListener("input", function() {
             let query = this.value.toLowerCase();
             autocomplete.innerHTML = "";
-            selectedIndex = -1; // Reset selection
+            selectedIndex = -1; // Reset det valgte
 
             let matches = pages.filter(page => page.name.toLowerCase().includes(query));
             if (matches.length === 0) {
@@ -29,7 +29,7 @@ const searchInput = document.getElementById("searchInput");
                 div.textContent = page.name;
                 div.dataset.url = page.url;
                 div.addEventListener("click", () => {
-                    window.location.href = page.url; // Redirect on click
+                    window.location.href = page.url; // Redirecter på klik
                 });
                 autocomplete.appendChild(div);
             });
@@ -37,7 +37,7 @@ const searchInput = document.getElementById("searchInput");
             autocomplete.style.display = "block";
         });
 
-        // Handle keyboard navigation
+        // Håndterer keyboard navigation
         searchInput.addEventListener("keydown", function(event) {
             let options = autocomplete.getElementsByTagName("div");
             
@@ -55,7 +55,7 @@ const searchInput = document.getElementById("searchInput");
             });
         });
 
-        // Hide suggestions when clicking outside
+        // Skjuler 'suggestions' når man klikker udenfor
         document.addEventListener("click", (event) => {
             if (!searchInput.contains(event.target) && !autocomplete.contains(event.target)) {
                 autocomplete.style.display = "none";

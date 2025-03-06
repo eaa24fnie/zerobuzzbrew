@@ -5,14 +5,14 @@ function confirmAge(isOfAge) {
     const errorMessage = document.getElementById("errorMessage");
 
     if (isOfAge) {
-        overlay.style.display = "none"; // Hide the popup
-        localStorage.setItem("ageConfirmed", "true"); // Store confirmation
+        overlay.style.display = "none"; // Skjuler pop-uppen
+        localStorage.setItem("ageConfirmed", "true"); // Gemmer bekræftigelse
     } else {
-        errorMessage.classList.remove("hidden"); // Show error message
+        errorMessage.classList.remove("hidden"); // Viser fejl-beskeden
     }
 }
 
-// Check if the user has already confirmed age
+// Tjekker om brugeren allerede har bekræftet sin alder
 window.onload = function () {
     if (localStorage.getItem("ageConfirmed") === "true") {
         document.getElementById("overlay").style.display = "none";
@@ -28,7 +28,7 @@ let body = document.querySelector('body');
 let total = document.querySelector('.total');
 let quantity = document.querySelector('.quantity');
 
-// Add event listeners for opening and closing the shopping cart
+// Tilføjer 'add event listeners' for åbning og lukning af shop-kurven
 openShopping.addEventListener('click', () => {
     body.classList.add('active');
 }); 
@@ -89,7 +89,7 @@ let products = [
 
 let listCards = [];
 
-// Load cart data from localStorage on app initialization
+// Indlæser kurvens data fra Localstorage ved app initialization
 function loadCartFromStorage() {
     const savedCart = localStorage.getItem('cart');
     if (savedCart) {
@@ -99,25 +99,25 @@ function loadCartFromStorage() {
 }
 
 function initApp() {
-    // Load cart data when the app initializes
+    // Indlæser kurvens data ved opstart
     loadCartFromStorage();
 
-    // Add event listener to the filter dropdown
+    // Tilføjer 'addeventlistener' til filter dropdown
     const filterOptions = document.getElementById('filterOptions');
     filterOptions.addEventListener('change', () => {
         renderProductList(filterOptions.value);
     }); 
 
-    // Initial render of products
+    // Initial render af produkterne
     renderProductList(filterOptions.value);
 }
 
 function renderProductList(filterType) {
-    // Clear the list before re-rendering
+    // Clear listen før re-rendering
     list.innerHTML = '';
 
-    // Sort the products based on the selected filter type
-    let sortedProducts = [...products]; // Copy the products to avoid modifying the original array
+    // Sorterer produkterne baseret på den valgte filter-type
+    let sortedProducts = [...products]; // Kopierer produkterne for at undgå at ændre den originale array
 
     if (filterType === 'newest') {
         sortedProducts.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded));
@@ -125,7 +125,7 @@ function renderProductList(filterType) {
         sortedProducts.sort((a, b) => b.popularity - a.popularity);
     }
 
-    // Render the sorted products
+    // Render the sorted products 
     sortedProducts.forEach((value) => {
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
