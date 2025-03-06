@@ -395,7 +395,7 @@ header .shopping span{
     color: var(--secondary-color);
     row-gap: 10px;
 }
-.listCard li div{
+.listCard li section{
     display: flex;
     justify-content: center;
     align-items: center;
