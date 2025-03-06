@@ -68,16 +68,16 @@ header ul {
     display: flex;
 }
 
-header ul a {
+header ul li a {
     text-decoration:none
 }
 
-header ul a li:hover {
+header ul li a:hover {
     color: var(--white);
     background-color: var(--primary-color);
 }
 
-header ul li {
+header ul li a {
     font-family: var(--font);
     color: var(--white);
     padding: 10px 15px;
