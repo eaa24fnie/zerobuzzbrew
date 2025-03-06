@@ -249,6 +249,16 @@ header ul li, .logo, header .icon:not(:last-child), .kurv {
   .produktbillede:hover {
     transform: translateY(-10px); /* Flytter billedet 10px opMoves the image up by 10 pixels */
   }
+
+
+  .webshopprodukter {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .webshopprodukter:hover {
+    transform: translateY(-10px); /* Moves the image 10px upwards */
+    transform: translateY(-10px) rotate(5deg);
+  }
  
 .infographic-titel {
     font-family: var(--headline);

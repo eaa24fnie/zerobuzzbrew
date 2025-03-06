@@ -134,7 +134,7 @@ function renderProductList(filterType) {
 
         newDiv.innerHTML = `
             <a href="produkter/${imageName}.html">
-                <img src="${value.image}" alt="${value.name}">
+                <img class="webshopprodukter" src="${value.image}" alt="${value.name}">
             </a>
             <div class="title">${value.name}</div>
             <div class="price">${value.price.toLocaleString()} kr</div>
