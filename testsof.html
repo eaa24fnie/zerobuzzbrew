@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/testsof.css">
+</head>
+<body>
+    <header>
+        <!-- section med logo og menypunkter -->
+      <section>
+        <!-- <img class="logo" src="img/zerobuzzbrew-lang.svg" alt="Zero Buzz Brew Logo"> -->
+        <a href="index.html">
+          <img class="logo" src="img/zerobuzzbrew-lang.svg" alt="Zero Buzz Brew Logo">
+        </a>
+    
+        <ul>
+          <a href="shop.html"><li>Webshop</li></a>
+          <a href="404.html"><li>Om Os</li></a>
+          <a href="404.html"><li>Merch</li></a>
+          <a href="404.html"><li>The Buzz Zone</li></a>
+        </ul>
+      </section>
+    
+      <!-- section med søgefelt, kurv, login og hvilket land man køber fra -->
+      <section>
+        <article class="search-container">
+          <input type="text" id="searchInput" placeholder="Search for a page...">
+          <article id="autocomplete" class="autocomplete"></article>
+        </article>
+        <img class="icon" src="img/account.svg" alt="account">
+        <div class="shopping">
+            <img class="kurv" src="/img/shopping.svg">
+            <span class="quantity">0</span>
+        </div>
+        <img class="icon" src="img/denmark.svg" alt="sprog">
+      </section>
+    </header>
+    
+    <main>
+
+      <!-- Sektion for baggrunds cirkel -->
+      <article class="forsidecirkel">
+        <img src="img/cirkel.svg" alt="baggrundscirkel" class="cirkel-1">
+      </article>
+
+        
+    <div class="box">
+        <section class="sortiment-tekst">
+            <article class="sortiment-tekst-dropdown"></article>
+            <article class="overskrift">
+              <p>VORES</p>
+              <h3>SORTIMENT</h3>
+            </article>
+          
+            <article class="sortiment-tekst-dropdown">
+              <select id="filterOptions" class="dropbtn">
+                <option value="popular">Most Popular</option>
+                <option value="newest">Newest</option>
+              </select>
+            </article>
+            
+          </section>
+
+        <div class="list">
+          
+        </div>
+    </div>
+    
+    <div class="card">
+        <h1>KURV</h1>
+        <ul class="listCard">
+        </ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Close</div>
+        </div>
+    </div>
+
+    <!-- Sektion for baggrunds cirkel -->
+    <article class="forsidecirkel">
+      <img src="img/cirkel.svg" alt="baggrundscirkel" class="cirkel-2">
+    </article>
+
+    <article class="forsidecirkel">
+      <img src="img/cirkel.svg" alt="baggrundscirkel" class="cirkel-3">
+    </article>
+
+    <section class="infographic-titel">
+        <h3>VORES SMAGSKORT</h3>
+        </section>
+    
+        <section class="infographic">
+          <img src="img/smagskort.svg" alt="Zero Buzz Brew's smagskort ">
+        </section>
+    
+        <section class="banner">
+          <article class="banner-content">
+            <p class="banner-space">ALKOHOL OG SAMFUND</p> 
+            <p class="banner-space">ROSKILDE FESTIVAL</p> 
+            <p class="banner-space">ERHVERVSAKADAMI AARHUS</p> 
+            <p class="banner-space">TINDERBOX</p> 
+            <p class="banner-space">AARHUS KOMMUNE</p> 
+    
+            <p class="banner-space">ALKOHOL OG SAMFUND</p> 
+            <p class="banner-space">ROSKILDE FESTIVAL</p> 
+            <p class="banner-space">ERHVERVSAKADAMI AARHUS</p> 
+            <p class="banner-space">TINDERBOX</p> 
+            <p class="banner-space">AARHUS KOMMUNE</p> 
+          </article>
+        </section>
+
+</main>
+
+    <footer>
+        <article class="kontakt">
+          <form action="/action_page.php">
+              <section class="container">
+                <h2>Kontakt</h2>
+              </section>
+    
+              <section class="container">
+                  <input type="text" placeholder="Navn" name="name" required>
+                </section>
+            
+              <section class="container">
+                <input type="email" placeholder="E-mail" name="mail" required>
+              </section>
+    
+              <section class="container">
+                  <textarea id="subject" name="subject" placeholder="Besked"></textarea>
+                </section>
+            
+              <section class="container">
+                <input type="submit" value="Send">
+              </section>
+            </form>
+        </article>
+
+        <section class="footer">
+          <article class="some">
+              <a href="404.html"><img src="img/facebook.svg" alt="Facebook"></a>
+              <a href="404.html"><img src="img/instagram.svg" alt="instagram"></a>
+          </article>
+          <article class="nyhedsbrev">
+          <form action="/action_page.php">
+              <section class="container">
+                <h2>Nyhedsbrev</h2>
+              </section>
+            
+              <section class="container">
+                <input type="email" placeholder="E-mail" name="mail" required>
+              </section>
+            
+              <section class="container">
+                <input type="submit" value="Send">
+              </section>
+            </form>
+          </article>
+        </section>
+    
+      </footer>
+
+    <script src="js/dropdown.js"></script>
+    <script src="js/testsof.js"></script>
+    <script src="js/script.js"></script>
+
+
+</body>
+</html>
