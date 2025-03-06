@@ -193,17 +193,17 @@ function reloadCard() {
                 <a href="${imageName}.html">
                     <img src="../${value.image}" alt="${value.name}">
                 </a>
-                <div>${value.name}</div>
-                <div>${value.price.toLocaleString()} kr</div>
-                <div>
+                <section>${value.name}</section>
+                <section>${value.price.toLocaleString()} kr</section>
+                <section>
                     <button onclick="changeQuantity(${value.id}, ${value.quantity - 1})">-</button>
-                    <div class="count">${value.quantity}</div>
+                    <article class="count">${value.quantity}</article>
                     <button onclick="changeQuantity(${value.id}, ${value.quantity + 1})">+</button>
-                </div>`;
+                </section>`;
             listCard.appendChild(newDiv);
         }
     });
-    total.innerText = totalPrice.toLocaleString() + ' kr';
+    total.innerText = totalPrice.toLocaleString() + ' DKK';
     quantity.innerText = count;
 }
 
@@ -253,7 +253,8 @@ function renderRelatedProducts(currentProductId) {
 
         productDiv.innerHTML = `
             <section>
-                        <a href="${imageName}.html"> <article class="relateret">
+                        <a href="${imageName}.html"> 
+                            <article class="relateret">
                             <img src="../${product.image}" alt="${product.name}">
                             </article>
                         </a>  

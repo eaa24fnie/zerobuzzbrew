@@ -135,8 +135,8 @@ function renderProductList(filterType) {
             <a href="produkter/${imageName}.html">
                 <img class="webshopprodukter" src="${value.image}" alt="${value.name}">
             </a>
-            <div class="title">${value.name}</div>
-            <div class="price">${value.price.toLocaleString()} DKK</div>
+            <section class="title">${value.name}</section>
+            <section class="price">${value.price.toLocaleString()} DKK</section>
             <button onclick="addToCard(${value.id})">Add To Cart</button>`;
 
         // Append the item to the list with a smooth transition
@@ -184,13 +184,13 @@ function reloadCard() {
                 <a href="produkter/${imageName}.html">
                     <img src="${value.image}" alt="${value.name}">
                 </a>
-                <div>${value.name}</div>
-                <div>${value.price.toLocaleString()} DKK</div>
-                <div>
+                <section>${value.name}</section>
+                <section>${value.price.toLocaleString()} DKK</section>
+                <section>
                     <button onclick="changeQuantity(${value.id}, ${value.quantity - 1})">-</button>
-                    <div class="count">${value.quantity}</div>
+                    <article class="count">${value.quantity}</article>
                     <button onclick="changeQuantity(${value.id}, ${value.quantity + 1})">+</button>
-                </div>`;
+                </section>`;
             listCard.appendChild(newDiv);
         }
     });
