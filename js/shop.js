@@ -125,7 +125,7 @@ function renderProductList(filterType) {
         sortedProducts.sort((a, b) => b.popularity - a.popularity);
     }
 
-    // Render the sorted products 
+    // Viser de sorterede produkter
     sortedProducts.forEach((value) => {
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
@@ -139,17 +139,17 @@ function renderProductList(filterType) {
             <section class="price">${value.price.toLocaleString()},00 DKK</section>
             <button onclick="addToCard(${value.id})">Add To Cart</button>`;
 
-        // Append the item to the list with a smooth transition
+        // Tilføjer item til listen med en smooth overgang
         list.appendChild(newDiv);
         
-        // Ensure smooth transition of position change
+        // Sikrer en smooth overgang af 'position change'
         setTimeout(() => {
             newDiv.style.transform = 'translateY(0)';
-        }, 10); // Small delay to trigger the transition
+        }, 10); 
     });
 }
 
-// Handle adding items to the shopping cart
+// Håndterer tilføjelse af items til kurven
 function addToCard(id) {
     const product = products.find(product => product.id === id);
     const index = listCards.findIndex(item => item.id === id);
@@ -159,9 +159,9 @@ function addToCard(id) {
         listCards.push({...product});
     } else {
         listCards[index].quantity++;
-    }
+    } 
     
-    // Save the cart to localStorage
+    // Gemmer kurven til Localstorage
     saveCartToStorage();
 
     reloadCard();
@@ -198,26 +198,25 @@ function reloadCard() {
     quantity.innerText = count;
 }
 
-// Handle changing item quantity
+// Håndterer mængden af produkterne
 function changeQuantity(id, quantity) {
     const index = listCards.findIndex(item => item.id === id);
     
     if (quantity == 0) {
-        listCards.splice(index, 1); // Remove the item from the list
+        listCards.splice(index, 1); // Sletter itemen fra listen
     } else {
         listCards[index].quantity = quantity;
     }
 
-    // Save the updated cart to localStorage
+    // Gemmer den opdaterede kurv til Localstorage
     saveCartToStorage();
 
     reloadCard();
 }
 
-// Save cart data to localStorage
+// Gemmer kurvens data til Localstorage
 function saveCartToStorage() {
     localStorage.setItem('cart', JSON.stringify(listCards));
 }
 
-// Initialize the app
 initApp();
