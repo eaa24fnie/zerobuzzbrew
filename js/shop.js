@@ -136,7 +136,7 @@ function renderProductList(filterType) {
                 <img class="webshopprodukter" src="${value.image}" alt="${value.name}">
             </a>
             <div class="title">${value.name}</div>
-            <div class="price">${value.price.toLocaleString()} kr</div>
+            <div class="price">${value.price.toLocaleString()} DKK</div>
             <button onclick="addToCard(${value.id})">Add To Cart</button>`;
 
         // Append the item to the list with a smooth transition
@@ -185,7 +185,7 @@ function reloadCard() {
                     <img src="${value.image}" alt="${value.name}">
                 </a>
                 <div>${value.name}</div>
-                <div>${value.price.toLocaleString()} kr</div>
+                <div>${value.price.toLocaleString()} DKK</div>
                 <div>
                     <button onclick="changeQuantity(${value.id}, ${value.quantity - 1})">-</button>
                     <div class="count">${value.quantity}</div>
@@ -194,7 +194,7 @@ function reloadCard() {
             listCard.appendChild(newDiv);
         }
     });
-    total.innerText = totalPrice.toLocaleString() + ' kr';
+    total.innerText = totalPrice.toLocaleString() + ' DKK';
     quantity.innerText = count;
 }
 
