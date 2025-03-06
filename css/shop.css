@@ -23,15 +23,10 @@ body {
 
 /* HEADER */
 
-
-header {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 40px;
-    position: absolute;
-    z-index: 1000;
+.shrink {
+    padding: 10px;
+    font-size: 18px;
+    background: var(--white);
 }
 
 header section {
