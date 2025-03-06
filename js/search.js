@@ -3,7 +3,7 @@
 const pages = [
     { name: "Pilsner", url: "../produkter/pilsner.html" },
     { name: "Spiky Ginger", url: "../produkter/spiky-ginger.html" },
-    { name: "beetylychious", url: "../produkter/beetylychious.html" },
+    { name: "Beetylychious", url: "../produkter/beetylychious.html" },
     { name: "Pinky Promise", url: "../produkter/pinky-promise.html" },
     { name: "Berry Bomb", url: "../produkter/berry-bomb.html" },
     { name: "Basil Smash", url: "../produkter/basil-smash.html" }
