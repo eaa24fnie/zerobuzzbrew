@@ -8,7 +8,8 @@ let body = document.querySelector('body');
 let total = document.querySelector('.total');
 let quantity = document.querySelector('.quantity');
 
-// Add event listeners for opening and closing the shopping cart
+
+//tilføjer event listener til at åbne og lukke kurven
 openShopping.addEventListener('click', () => {
     body.classList.add('active');
 }); 
@@ -76,7 +77,8 @@ let products = [
 
 let listCards = [];
 
-// Load cart data from localStorage on app initialization
+
+// loader kurvens data fra localStorage på appinnit 
 function loadCartFromStorage() {
     const savedCart = localStorage.getItem('cart');
     if (savedCart) {
@@ -86,31 +88,33 @@ function loadCartFromStorage() {
 }
 
 function initApp() {
-    // Load cart data when the app initializes
+    // loader kurvens data når app indlæses
     loadCartFromStorage();
 
-    // Add event listener to the filter dropdown
+    // tilføjer event listener til filter dropdown funktionen
     const filterOptions = document.getElementById('filterOptions');
     filterOptions.addEventListener('change', () => {
         renderProductList(filterOptions.value);
     });
 
-    // Initial render of products
+    // første visning af produkter
     renderProductList(filterOptions.value);
 }
 
 function renderProductList(filterType) {
-    // Clear the list before re-rendering
+    // rydder listen før genindlæsning
     list.innerHTML = '';
 
-    // Get the current page's filename (without the .html extension)
+
+    //tager filnavnet fra aktuelle side (uden .html)
     const currentPage = window.location.pathname.split('/').pop().replace('.html', '');
 
-    // Filter products based on the current page's filename
+    // Filtrere produkter baseret på aktuelle sides fil-navn
     let filteredProducts = products.filter(product => product.name.toLowerCase().replace(' ', '-') === currentPage.toLowerCase());
 
-    // Sort the filtered products based on the selected filter type
-    let sortedProducts = [...filteredProducts]; // Copy the filtered products to avoid modifying the original array
+ 
+    //sorterer filtrerede produkter baseret på den valgte filtype
+    let sortedProducts = [...filteredProducts]; // Kopiér de filtrerede produkter for at undgå at ændre det originale array.
 
     if (filterType === 'newest') {
         sortedProducts.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded));
@@ -118,7 +122,7 @@ function renderProductList(filterType) {
         sortedProducts.sort((a, b) => b.popularity - a.popularity);
     }
 
-    // Render the sorted products
+    // Indlæser de sorterede produkter
     sortedProducts.forEach((value) => {
         let newDiv = document.createElement('section');
         newDiv.classList.add('item');
@@ -146,19 +150,21 @@ function renderProductList(filterType) {
                 </section>
             </section>`;
 
-        // Append the item to the list with a smooth transition
+        // Tilføj elementet til listen med en glidende overgang
         list.appendChild(newDiv);
         
-        // Ensure smooth transition of position change
+    
+        //sikrer smooth transition ved positionsskift
         setTimeout(() => {
             newDiv.style.transform = 'translateY(0)';
-        }, 10); // Small delay to trigger the transition
+        }, 10); // lille delay til at trigger transform
     });
 }
 
 
 
-// Handle adding items to the shopping cart
+
+// tilføjelse af produkter til kurv
 function addToCard(id) {
     const product = products.find(product => product.id === id);
     const index = listCards.findIndex(item => item.id === id);
@@ -170,7 +176,7 @@ function addToCard(id) {
         listCards[index].quantity++;
     }
     
-    // Save the cart to localStorage
+    //Gemmer kurven i local storage
     saveCartToStorage();
 
     reloadCard();
@@ -207,23 +213,23 @@ function reloadCard() {
     quantity.innerText = count;
 }
 
-// Handle changing item quantity
+// Ændring af produkt antal
 function changeQuantity(id, quantity) {
     const index = listCards.findIndex(item => item.id === id);
     
     if (quantity == 0) {
-        listCards.splice(index, 1); // Remove the item from the list
+        listCards.splice(index, 1); // fjerner produkt fra listen
     } else {
         listCards[index].quantity = quantity;
     }
 
-    // Save the updated cart to localStorage
+    // Gemmer opdaterede kurv til localStorage
     saveCartToStorage();
 
     reloadCard();
 }
 
-// Save cart data to localStorage
+// Gemmer kurv til localStorage
 function saveCartToStorage() {
     localStorage.setItem('cart', JSON.stringify(listCards));
 }
@@ -236,14 +242,15 @@ function renderRelatedProducts(currentProductId) {
         return;
     }
 
-    // Filter out the current product
+    
+    //filtrere aktuelle produkt fra
     let relatedProducts = products
     .filter(product => String(product.id) !== String(currentProductId))
 
-        .sort((a, b) => b.popularity - a.popularity) // Sort by popularity (descending)
+        .sort((a, b) => b.popularity - a.popularity) // sorter fre popularitet
         .slice(0, 3); // Take the top 3
 
-    relatedProductsContainer.innerHTML = ''; // Clear previous content
+    relatedProductsContainer.innerHTML = ''; // rydder tidligere indhold
 
     relatedProducts.forEach(product => {
         let productDiv = document.createElement('section');
@@ -268,6 +275,6 @@ function renderRelatedProducts(currentProductId) {
 let currentProductId = 1; 
 renderRelatedProducts(currentProductId);
 
-// Initialize the app
+// genindlæser app
 initApp();
 
