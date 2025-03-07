@@ -53,23 +53,6 @@ header {
     z-index: 1000;
 }
 
-/* header {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 40px;
-    position: fixed;
-    z-index: 5000;
-    transition: all 0.3s ease-in-out;
-}
-
-.shrink {
-    padding: 10px;
-    font-size: 18px;
-    background: var(--secondary-color);
-} */
-
 header section {
     display: flex;
     align-items: center;
@@ -135,7 +118,7 @@ header .icon:nth-child(4) {
     width: 100%; padding: 10px; 
 }
 
-input::placeholder {
+.search-container input::placeholder {
     color: var(--black);
 }
 
