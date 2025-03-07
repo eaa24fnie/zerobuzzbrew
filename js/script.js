@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 // Funktion til at bekræfte alder
 function confirmAge(isOfAge) {

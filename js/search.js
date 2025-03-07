@@ -19,6 +19,7 @@ const searchInput = document.getElementById("searchInput");
             selectedIndex = -1; // Reset det valgte
 
             let matches = pages.filter(page => page.name.toLowerCase().includes(query));
+            
             if (matches.length === 0) {
                 autocomplete.style.display = "none";
                 return;
