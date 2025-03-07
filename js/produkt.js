@@ -200,8 +200,8 @@ function reloadCard() {
                     <img src="../${value.image}" alt="${value.name}">
                 </a>
                 <section>${value.name}</section>
-                <section>${value.price.toLocaleString()} kr</section>
-                <section>
+                <section>${value.price.toLocaleString()},00 DKK</section>
+                <section class="number">
                     <button onclick="changeQuantity(${value.id}, ${value.quantity - 1})">-</button>
                     <article class="count">${value.quantity}</article>
                     <button onclick="changeQuantity(${value.id}, ${value.quantity + 1})">+</button>
